@@ -8,10 +8,10 @@
 }
 
 .second {
-  color: #f6133b;
+  color: #d20028;
 }
 .second-bg {
-  background: #f6133b;
+  background: #d20028;
 }
 
 .bk {
@@ -29,29 +29,29 @@
 }
 
 .light-g1 {
-  color: #f0f0f0;
+  color: #e5e5e5;
 }
 .light-g2 {
-  color: #e5e5e5;
+  color: #d2d2d2;
 }
 .light-g3 {
   color: #9a9a9a;
 }
 .light-g4 {
-  color: #2c2c2c;
+  color: #1d1d1d;
 }
 
 .light-g1-bg {
-  background: #f0f0f0;
+  background: #e5e5e5;
 }
 .light-g2-bg {
-  background: #e5e5e5;
+  background: #d2d2d2;
 }
 .light-g3-bg {
   background: #9a9a9a;
 }
 .light-g4-bg {
-  background: #2c2c2c;
+  background: #1d1d1d;
 }
 
 /* link button */
@@ -66,7 +66,10 @@
   padding-top: 9px;
   text-align: center;
   box-sizing: border-box;
-
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  /* font-family: "NanumBarunGothicBold"; 체크용 삭제ok*/
 }
+
+.sdw {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* font-family: "NanumBarunGothicBold"; 체크용 삭제ok*/
