@@ -1,0 +1,29 @@
+.menu{
+  height: 157px;
+}
+
+header .container{
+  position: relative;
+}
+
+header h1 a{
+  position: absolute;
+  left:0;
+  top:calc(50% - 27.5px);
+  width: 196px;
+  height: 55px;
+  background: url(/images/logo.png) no-repeat;
+  background-size: contain;
+  text-indent: -99999px;
+}
+
+header nav{
+  position: absolute;
+  right: 0;
+}
+
+nav ul li a{
+  color:#fff;
+  display:block;
+  padding: 18px;
+}
