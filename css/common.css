@@ -15,11 +15,12 @@
 }
 
 .sm-pd{
-  padding: 28px;
+  background-color: #000;
+  padding: 51px 0;
 }
 
 .xsm-pd{
-  padding: 51px;
+  padding: 28px;
 }
 
 /* font-family: 'NanumBarunGothicExtraLight';
