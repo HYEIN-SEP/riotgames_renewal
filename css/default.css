@@ -1,27 +1,39 @@
-header{
+header {
+  width: 100%;
   background-color: #000;
-  padding: 51px 0;
 }
 
-.container{
-  width:1272px;
-  margin: 0 auto;
+#container {
+  position: relative;
 }
 
-header h1{
-  float: left;
+.logo a img {
+  position: absolute;
+  top: calc(50% - 27.5px);
+  width: 196px;
+  height: 55px;
 }
 
-header nav{
+nav {
+  width: 607px;
+  float: right;
+  padding: 42px 0;
+}
+
+nav ul {
+  height: 50px;
+}
+
+nav ul li {
+  display: block;
+  padding: 0 16px;
   float: right;
 }
 
-.cf:after{
-  content:'';
-  clear:both;
-  display:block;
+nav ul li a {
+  color: #fff;
 }
 
-nav ul li{
-  float: left;
+.top_menu:after {
+  content: "";
 }

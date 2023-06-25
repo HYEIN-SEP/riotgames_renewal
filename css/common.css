@@ -1,25 +1,26 @@
 @import url(reset.css);
 
 /*layout*/
-.container{
-  width:1272px;
+#container {
+  width: 1272px;
+  height: 157px;
   margin: 0 auto;
 }
 
-.big-pd{
+.big-pd {
   padding-bottom: 136px 0;
 }
 
-.md-pd{
+.md-pd {
   padding-bottom: 54px;
 }
 
-.sm-pd{
+.sm-pd {
   background-color: #000;
   padding: 51px 0;
 }
 
-.xsm-pd{
+.xsm-pd {
   padding: 28px;
 }
 
@@ -28,26 +29,24 @@ font-family: 'NanumBarunGothicLight';
 font-family: 'NanumBarunGothic';
 font-family: 'NanumBarunGothicBold'; */
 
-
 /* typography */
-.main-tt{
+.main-tt {
   font-size: 16px;
   line-height: 27px;
-  font-family: 'NanumBarunGothic';
+  font-family: "NanumBarunGothic";
 }
 
-.big-tt{
+.big-tt {
   font-size: 36px;
-  font-family: 'NanumBarunGothicBold';
+  font-family: "NanumBarunGothicBold";
 }
-.mid-tt{
+.mid-tt {
   font-size: 24px;
   line-height: 34px;
 }
-.small-pg{
+.small-pg {
   font-size: 14px;
 }
-
 
 /*color*/
 
