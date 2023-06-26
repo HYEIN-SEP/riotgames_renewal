@@ -1,0 +1,42 @@
+.container {
+  width: 1270px;
+  margin: 0 auto;
+}
+
+.panel-question {
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.panel-heading {
+  height: 70px;
+  cursor: pointer;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+}
+
+.panel-heading:hover {
+  background-color: #eb0029;
+  color: white;
+}
+
+.panel-body {
+  padding: 15px;
+  display: none;
+  height: 150px;
+}
+
+.active .panel-body {
+  display: block;
+}
+
+#btn-collapse {
+  margin-bottom: 10px;
+  background-color: #999;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+}
