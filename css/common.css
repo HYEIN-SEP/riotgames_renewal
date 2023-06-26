@@ -1,0 +1,123 @@
+@import url(reset.css);
+
+/*layout*/
+.container{
+  width:1272px;
+  margin: 0 auto;
+}
+
+.big-pd{
+  padding-bottom: 136px 0;
+}
+
+.md-pd{
+  padding-bottom: 54px;
+}
+
+.sm-pd{
+  padding: 28px;
+}
+
+.xsm-pd{
+  padding: 51px;
+}
+
+/* font-family: 'NanumBarunGothicExtraLight';
+font-family: 'NanumBarunGothicLight';
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold'; */
+
+
+/* typography */
+body{
+  font-size: 16px;
+  line-height: 27px;
+  font-family: 'NanumBarunGothic';
+}
+
+.main-tt{
+  font-size: 36px;
+  font-family: 'NanumBarunGothicBold';
+}
+.sub-tt{
+  font-size: 24px;
+  line-height: 34px;
+}
+.small-pg{
+  font-size: 14px;
+}
+
+
+/*color*/
+
+.highlight {
+  color: #eb0029;
+}
+.highlight-bg {
+  background: #eb0029;
+}
+
+.second {
+  color: #d20028;
+}
+.second-bg {
+  background: #d20028;
+}
+
+.bk {
+  color: #000;
+}
+.bk-bg {
+  background: #000;
+}
+
+.wt {
+  color: #fff;
+}
+.wt-bg {
+  background: #fff;
+}
+
+.light-g1 {
+  color: #e5e5e5;
+}
+.light-g2 {
+  color: #d2d2d2;
+}
+.light-g3 {
+  color: #9a9a9a;
+}
+.light-g4 {
+  color: #1d1d1d;
+}
+
+.light-g1-bg {
+  background: #e5e5e5;
+}
+.light-g2-bg {
+  background: #d2d2d2;
+}
+.light-g3-bg {
+  background: #9a9a9a;
+}
+.light-g4-bg {
+  background: #1d1d1d;
+}
+
+/* link button */
+
+.btn {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 1.5em;
+  padding-top: 9px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sdw {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
