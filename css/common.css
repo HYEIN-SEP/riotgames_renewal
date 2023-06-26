@@ -1,14 +1,13 @@
 @import url(reset.css);
 
 /*layout*/
-#container {
+.container {
   width: 1272px;
-  height: 157px;
   margin: 0 auto;
 }
 
 .big-pd {
-  padding-bottom: 136px 0;
+  padding-bottom: 136px;
 }
 
 .md-pd {
