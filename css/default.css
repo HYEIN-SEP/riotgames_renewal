@@ -53,7 +53,7 @@ nav {
 nav ul {
   float: left;
   margin-right: 130px;
-  z-index: 10;
+  /* z-index: 10; */
   text-align: left;
 }
 
