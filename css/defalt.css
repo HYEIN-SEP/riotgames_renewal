@@ -1,3 +1,66 @@
+/*tab*/
+
+.nav {
+  text-align: center;
+}
+
+.tab-menu li a {
+  display: block;
+}
+
+.tab-menu {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tab-menu li {
+  float: left;
+  margin: 0 12px;
+}
+
+.tab-menu li:last-child {
+  margin: 0;
+}
+
+#tab-content {
+  width: 1920px;
+  height: 640px;
+  list-style-type: none;
+}
+
+#tab-content li:before:hover {
+  content: "background:black;";
+  opacity: 0.2;
+}
+
+#tabs-1,
+#tabs-2 {
+  width: 1920px;
+  background: black;
+}
+
+#tabs-1,
+#tabs-2:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bg {
+  float: left;
+  width: 960px;
+  height: 640px;
+}
+
+.sm {
+  float: left;
+  background-color: violet;
+  width: 480px;
+  height: 320px;
+}
+
+/*accordion*/
+
 .container {
   width: 1270px;
   margin: 0 auto;
@@ -40,3 +103,5 @@
   padding: 5px;
   float: right;
 }
+
+/*tab*/
