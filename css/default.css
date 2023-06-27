@@ -1,28 +1,80 @@
 header {
-  background-color: #fff;
+  background-color: #000;
   height: 157px;
-  overflow: hidden;
   position: relative;
 }
 
-.logo img{
+.container {
+  height: 100%;
+}
+
+.logo {
+  width: 196px;
+  height: 100%;
+  float: left;
+}
+
+.logo img {
   position: absolute;
-  top:calc(50% - 27.5px);
-  float:left;
+  top: 51px;
   width: 196px;
   height: 55px;
 }
 
-.menu{
+.menu ul {
   float: right;
+  margin-top: 42px;
 }
 
-.menu > ul > li{
+.menu ul li {
   float: left;
+  padding-left: 30px;
 }
 
-nav > ul > li {
+.menu ul li a {
+  color: #fff;
+}
+
+.menu ul li a:hover {
+  color: #eb0029;
+}
+
+nav {
+  position: absolute;
+  bottom: -470px;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 470px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+nav ul {
   float: left;
+  margin-right: 130px;
+  z-index: 10;
+  text-align: left;
+}
+
+nav ul:last-child {
+  margin-right: 0;
+}
+
+nav ul li {
+  padding-top: 34px;
+}
+
+nav ul li a:hover {
+  color: #eb0029;
+}
+
+nav ul li:first-child {
+  font-family: "NanumBarunGothicBold";
+}
+
+nav.active {
+  opacity: 1;
 }
 
 .slidewrapper {
