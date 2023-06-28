@@ -21,9 +21,16 @@ header {
   height: 55px;
 }
 
-.menu ul {
+header .menu{
+  width:600px;
   float: right;
-  margin-top: 42px;
+  padding-top:31.4px
+}
+
+.menu ul{
+  float: right;
+  display: block;
+  padding-bottom: 31.4px;
 }
 
 .menu ul li {

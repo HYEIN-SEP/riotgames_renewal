@@ -1,15 +1,13 @@
 let bottommenu = document.querySelectorAll(".bottom_menu li"),
   nav = document.querySelector("nav"),
-  navList = document.querySelectorAll("nav ul");
+  header = document.querySelector("header");
+  console.log(header)
 
 for (let i of bottommenu) {
   i.addEventListener("mouseover", () => {
     nav.classList.add("active");
   });
 }
-
-for (let i of navList) {
-  i.addEventListener("mouseout", () => {
+nav.addEventListener("mouseout", () => {
     nav.classList.remove("active");
-  });
-}
+  })
