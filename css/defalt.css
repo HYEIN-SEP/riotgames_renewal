@@ -105,10 +105,22 @@
 }
 
 #tab-content {
-  height: 360px;
+  height: 640px;
+}
+
+#tab-content > div:last-child {
+  display: none;
+}
+
+#tab-content > div.active {
+  display: block;
 }
 
 /*esports*/
+.esport {
+  margin-top: 136px;
+}
+
 /*footer*/
 footer {
   width: 100%;
