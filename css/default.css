@@ -21,13 +21,13 @@ header {
   height: 55px;
 }
 
-header .menu{
-  width:600px;
+header .menu {
+  width: 600px;
   float: right;
-  padding-top:31.4px
+  padding-top: 31.4px;
 }
 
-.menu ul{
+.menu ul {
   float: right;
   display: block;
   padding-bottom: 31.4px;
@@ -167,4 +167,134 @@ nav.active {
 .int ul li img {
   width: 100%;
   margin-bottom: 41px;
+}
+
+/*tab*/
+
+.nav {
+  text-align: center;
+}
+
+.tab-menu li a {
+  display: block;
+}
+
+.tab-menu {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tab-menu li {
+  float: left;
+  margin: 0 12px;
+}
+
+.tab-menu li:last-child {
+  margin: 0;
+}
+
+#tab-content {
+  width: 1920px;
+  height: 640px;
+  list-style-type: none;
+}
+
+#tab-content li:before:hover {
+  content: "";
+  opacity: 0.2;
+}
+
+#tabs-1,
+#tabs-2 {
+  width: 1920px;
+  background: black;
+}
+
+#tabs-1,
+#tabs-2:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bg {
+  float: left;
+  width: 960px;
+  height: 640px;
+}
+
+.sm {
+  float: left;
+  background-color: violet;
+  width: 480px;
+  height: 320px;
+}
+
+/*accordion*/
+
+.container {
+  width: 1270px;
+  margin: 0 auto;
+}
+
+.panel-question {
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.panel-heading {
+  height: 70px;
+  cursor: pointer;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  margin: 1px 0;
+}
+
+.panel-heading:hover {
+  background-color: #eb0029;
+  color: white;
+}
+
+.panel-body {
+  padding: 15px;
+  display: none;
+  height: 150px;
+}
+
+.active .panel-body {
+  display: block;
+}
+
+#btn-collapse {
+  margin-bottom: 10px;
+  background-color: #999;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+}
+
+#tab-content {
+  height: 640px;
+}
+
+#tab-content > div:last-child {
+  display: none;
+}
+
+#tab-content > div.active {
+  display: block;
+}
+
+/*esports*/
+.esport {
+  margin-top: 136px;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  height: 340px;
+  position: absolute;
 }

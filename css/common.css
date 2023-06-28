@@ -30,7 +30,6 @@ font-family: 'NanumBarunGothicBold'; */
 
 /* typography */
 .main-tt {
-body {
   font-size: 16px;
   line-height: 27px;
   font-family: "NanumBarunGothic";
@@ -41,7 +40,6 @@ body {
   font-family: "NanumBarunGothicBold";
 }
 .mid-tt {
-.main-tt {
   font-size: 36px;
   font-family: "NanumBarunGothicBold";
 }
