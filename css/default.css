@@ -7,8 +7,8 @@ header {
   z-index: 8;
 }
 
-header .menu-wrap{
-  position: relative; 
+header .menu-wrap {
+  position: relative;
 }
 
 .container {
@@ -100,7 +100,7 @@ nav.active {
 }
 
 .slide-container {
-  position:absolute;
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
@@ -117,7 +117,7 @@ nav.active {
   text-align: center;
 }
 
-.slide-container li .btn{
+.slide-container li .btn {
   position: absolute;
   bottom: 50%;
   right: 50%;
@@ -141,7 +141,7 @@ nav.active {
   right: 246px;
 }
 
-.int{
+.int {
   height: 600px;
 }
 
@@ -221,7 +221,6 @@ nav.active {
 
 .sm {
   float: left;
-  background-color: violet;
   width: 480px;
   height: 320px;
 }
@@ -241,7 +240,7 @@ nav.active {
 .panel-heading {
   height: 70px;
   cursor: pointer;
-  padding: 20px 30px;
+  padding: 22px 30px;
   box-sizing: border-box;
   margin: 1px 0;
 }
@@ -252,14 +251,14 @@ nav.active {
 }
 
 .panel-body {
-  padding: 15px;
+  padding: 50px 60px;
   display: none;
-  height: 150px;
+  height: 100px;
 }
 
-/* .active .panel-body {
+.active .panel-body {
   display: block;
-} */
+}
 
 #btn-collapse {
   margin-bottom: 10px;
@@ -271,15 +270,16 @@ nav.active {
   float: right;
 }
 
-#tab-content {
+.tab-content {
   height: 640px;
+  list-style: none;
 }
 
-#tab-content > div:last-child {
+.tab-content > div:last-child {
   display: none;
 }
 
-#tab-content > div.active {
+.tab-content > div.active {
   display: block;
 }
 
