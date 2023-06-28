@@ -76,7 +76,7 @@
   cursor: pointer;
   padding: 20px 30px;
   box-sizing: border-box;
-  margin-bottom: 1px;
+  margin: 1px 0;
 }
 
 .panel-heading:hover {
