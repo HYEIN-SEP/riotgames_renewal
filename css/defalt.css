@@ -104,6 +104,10 @@
   float: right;
 }
 
+#tab-content {
+  height: 360px;
+}
+
 /*esports*/
 /*footer*/
 footer {
