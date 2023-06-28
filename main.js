@@ -11,3 +11,6 @@ for (let i of bottommenu) {
 nav.addEventListener("mouseout", () => {
     nav.classList.remove("active");
   })
+
+let slideWrapper = document.querySelector('.slide-wrapper'),
+    slideContatiner = document

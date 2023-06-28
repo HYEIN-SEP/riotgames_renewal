@@ -1,7 +1,14 @@
 header {
-  background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 157px;
-  position: relative;
+  background-color: #000;
+  z-index: 8;
+}
+
+header .menu-wrap{
+  position: relative; 
 }
 
 .container {
@@ -48,7 +55,7 @@ header .menu{
 
 nav {
   position: absolute;
-  bottom: -470px;
+  bottom: -627px;
   left: 0;
   z-index: 9;
   width: 100%;
@@ -84,21 +91,22 @@ nav.active {
   opacity: 1;
 }
 
-.slidewrapper {
+.slide-wrapper {
   position: relative;
   width: 100%;
   height: 870px;
+  padding-top: 157px;
   overflow: hidden;
 }
 
-.slidecontainer {
-  position: absolute;
+.slide-container {
+  position:absolute;
   width: 100%;
   height: 100%;
   left: 0;
 }
 
-.slidecontainer li {
+.slide-container li {
   position: absolute;
   top: 0%;
   height: 100%;
@@ -109,29 +117,13 @@ nav.active {
   text-align: center;
 }
 
-.slide1 {
-  background-image: url(/images/slide1.png);
-}
-.slide2 {
-  background-image: url(/images/slide2.png);
-}
-.slide3 {
-  background-image: url(/images/slide3.png);
-}
-.slide4 {
-  background-image: url(/images/slide4.png);
-}
-.slide5 {
-  background-image: url(/images/slide5.png);
-}
-
-.slide5 .btn {
+.slide-container li .btn{
   position: absolute;
-  bottom: 193px;
-  right: 504px;
+  bottom: 50%;
+  right: 50%;
 }
 
-.slidewrapper .controls {
+.slide-wrapper .controls {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -148,6 +140,9 @@ nav.active {
 #next {
   right: 246px;
 }
+
+
+
 
 .int ul li {
   float: left;
