@@ -308,12 +308,70 @@ nav.active {
 
 /*esports*/
 .esport {
-  margin-top: 136px;
+  width: 100%;
+  height: 378px;
+  background-image: url(../img/e-sports.png);
+  object-fit:cover;
 }
+
+
 
 /*footer*/
 footer {
   width: 100%;
-  height: 340px;
+  height: 214px;
   position: absolute;
+  background: #1d1d1d;
 }
+
+.footer-width{
+  position: relative;
+  width: 1270px;
+  margin: 0 auto;
+   
+ } 
+
+.footer-link>a{
+  color:#fff;
+  font-family: "NanumBarunGothic";
+  margin-right: 30px;
+
+} 
+
+.footer-link{
+  margin:50px 30px 52px 0px;
+}
+
+footer >div>p:nth-child(2){
+  color:#9a9a9a;
+  font-family: "NanumBarunGothic";
+} 
+
+.footer-icon{
+width:189px;
+height:53px;
+line-height:40px;
+position: absolute;
+right:0; top: calc(50% - 30px);
+background-color: #fff;
+};
+
+footer:after {
+  content: "";
+
+}
+
+.footer2{
+  margin-top: 214px;
+  width: 100%;
+  height: 122px;
+  position: absolute;
+  background: #1d1d1d;
+  border-top: #474747 3px solid;
+  
+}
+
+.footer2 > div > p{
+margin-top:51px;
+
+} 
