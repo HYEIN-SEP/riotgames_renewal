@@ -40,13 +40,14 @@ font-family: 'NanumBarunGothicBold'; */
 }
 
 .mid-tt {
-  font-size: 36px;
+  font-size: 28px;
   font-family: "NanumBarunGothicBold";
 }
 
 .sub-tt {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 34px;
+  font-family: 'NanumBarunGothic';
 }
 
 .small-pg {

@@ -1,15 +1,14 @@
 // 드롭다운-혜인
 let bottommenu = document.querySelectorAll(".bottom_menu li"),
-  nav = document.querySelector("nav"),
-  header = document.querySelector("header");
-console.log(header);
+    nav = document.querySelector("nav"),
+    header = document.querySelector("header");
 
 for (let i of bottommenu) {
-  i.addEventListener("mouseover", () => {
+  i.addEventListener("mouseenter", () => {
     nav.classList.add("active");
   });
 }
-nav.addEventListener("mouseout", () => {
+nav.addEventListener("mouseleave", () => {
   nav.classList.remove("active");
 });
 
@@ -43,10 +42,10 @@ function moveSlide(num) {
     prevBtn.classList.remove("disabled");
   }
 
-  // for (let item of slides) {
-  //   item.classList.remove("active");
-  // }
-  // slides[currentSlideIdx].classList.add("active");
+//   // for (let item of slides) {
+//   //   item.classList.remove("active");
+//   // }
+//   // slides[currentSlideIdx].classList.add("active");
 }
 moveSlide(0);
 

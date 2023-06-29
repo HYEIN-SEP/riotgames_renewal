@@ -2,42 +2,34 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 157px;
+  height: 55px;
   background-color: #000;
+  padding: 51px 0;
   z-index: 8;
 }
 
-header .menu-wrap {
-  position: relative;
-}
-
-.container {
-  height: 100%;
-}
-
-.logo {
-  width: 196px;
-  height: 100%;
-  float: left;
-}
-
-.logo img {
-  position: absolute;
-  top: 51px;
+.logo a{
   width: 196px;
   height: 55px;
+  float: left;
+  background-image: url(/images/logo.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -99999px;
 }
 
 header .menu {
   width: 600px;
   float: right;
-  padding-top: 31.4px;
 }
 
 .menu ul {
   float: right;
-  display: block;
-  padding-bottom: 31.4px;
+}
+
+.top_menu{
+  padding-bottom: 20px;
 }
 
 .menu ul li {
@@ -55,7 +47,7 @@ header .menu {
 
 nav {
   position: absolute;
-  bottom: -627px;
+  top: 100%;
   left: 0;
   z-index: 99999;
   width: 100%;
@@ -134,10 +126,38 @@ nav.active {
   background-image: url(/images/slide5.png);
 }
 
-.slide-container li .btn {
+.slide1 .btn{
   position: absolute;
-  bottom: 50%;
-  right: 50%;
+  left: calc(50% - 100px);
+  bottom: 150px;
+}
+
+.slide2 .btn{
+  position: absolute;
+  left: 374px;
+  bottom: 296px;
+}
+
+.slide3 .btn{
+  position: absolute;
+  right: 525px;
+  bottom: 236px;
+}
+
+.slide4 .btn{
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 326px;
+}
+
+.slide5 .btn{
+  position: absolute;
+  right: 504px;
+  bottom: 164px;
+}
+
+.slide-container li .btn:hover{
+  
 }
 
 .slide-wrapper .controls {
@@ -187,6 +207,7 @@ nav.active {
 
 .nav {
   text-align: center;
+  box-sizing:border-box;
 }
 
 .tab-menu li a {
@@ -208,7 +229,7 @@ nav.active {
 }
 
 #tab-content {
-  width: 1920px;
+  width: 100%;
   height: 640px;
   list-style-type: none;
 }
@@ -245,10 +266,10 @@ nav.active {
 
 /*accordion*/
 
-.container {
+/* .container {
   width: 1270px;
   margin: 0 auto;
-}
+} */
 
 .panel-question {
   margin-bottom: 20px;
