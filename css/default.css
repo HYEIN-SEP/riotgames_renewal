@@ -198,34 +198,31 @@ nav.active {
   vertical-align: top;
 }
 
-.tab-menu li {
+.tab-menu section {
   float: left;
   margin: 0 12px;
 }
 
-.tab-menu li:last-child {
+.tab-menu section:last-child {
   margin: 0;
 }
 
-#tab-content {
-  width: 1920px;
-  height: 640px;
-  list-style-type: none;
+.tab-wrapper {
+  width: 100%;
 }
 
-#tab-content li:before:hover {
-  content: "";
+.tab-content {
+  width: 100%;
+  list-style-type: none;
+  height: 650px;
+  overflow: hidden;
+}
+
+#tab-content section:hover {
   opacity: 0.2;
 }
 
-#tabs-1,
-#tabs-2 {
-  width: 1920px;
-  background: black;
-}
-
-#tabs-1,
-#tabs-2:after {
+.cf:after {
   content: "";
   display: block;
   clear: both;
@@ -233,18 +230,22 @@ nav.active {
 
 .bg {
   float: left;
-  width: 960px;
-  height: 640px;
+  width: 50%;
+  object-fit: cover;
 }
 
 .sm {
   float: left;
-<<<<<<< HEAD
-  background-color: violet;
-=======
->>>>>>> main
-  width: 480px;
+  width: 25%;
   height: 320px;
+  overflow: hidden;
+}
+
+.tabs-1,
+.tab-2 > section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*accordion*/
@@ -262,11 +263,7 @@ nav.active {
 .panel-heading {
   height: 70px;
   cursor: pointer;
-<<<<<<< HEAD
-  padding: 20px 30px;
-=======
   padding: 22px 30px;
->>>>>>> main
   box-sizing: border-box;
   margin: 1px 0;
 }
@@ -277,15 +274,9 @@ nav.active {
 }
 
 .panel-body {
-<<<<<<< HEAD
-  padding: 15px;
-  display: none;
-  height: 150px;
-=======
   padding: 50px 60px;
   display: none;
   height: 100px;
->>>>>>> main
 }
 
 .active .panel-body {
@@ -302,17 +293,6 @@ nav.active {
   float: right;
 }
 
-<<<<<<< HEAD
-#tab-content {
-  height: 640px;
-}
-
-#tab-content > div:last-child {
-  display: none;
-}
-
-#tab-content > div.active {
-=======
 .tab-content {
   height: 640px;
   list-style: none;
@@ -323,7 +303,6 @@ nav.active {
 }
 
 .tab-content > div.active {
->>>>>>> main
   display: block;
 }
 
