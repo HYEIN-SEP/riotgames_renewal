@@ -8,7 +8,7 @@ header {
   z-index: 8;
 }
 
-.logo a{
+.logo a {
   width: 196px;
   height: 55px;
   float: left;
@@ -28,7 +28,7 @@ header .menu {
   float: right;
 }
 
-.top_menu{
+.top_menu {
   padding-bottom: 20px;
 }
 
@@ -39,6 +39,7 @@ header .menu {
 
 .menu ul li a {
   color: #fff;
+  font-family: "NanumBarunGothicLight";
 }
 
 .menu ul li a:hover {
@@ -58,17 +59,25 @@ nav {
 
 nav ul {
   float: left;
-  margin-right: 130px;
+  width: 176px;
+  height: 470px;
   /* z-index: 10; */
   text-align: left;
+  padding-left: 30px;
+  border-left: 1px solid #000;
 }
 
 nav ul:last-child {
   margin-right: 0;
+  border-right: 1px solid #000;
 }
 
 nav ul li {
   padding-top: 34px;
+}
+
+nav ul li a {
+  color: #9a9a9a;
 }
 
 nav ul li a:hover {
@@ -126,38 +135,37 @@ nav.active {
   background-image: url(/images/slide5.png);
 }
 
-.slide1 .btn{
+.slide1 .btn {
   position: absolute;
   left: calc(50% - 100px);
   bottom: 150px;
 }
 
-.slide2 .btn{
+.slide2 .btn {
   position: absolute;
   left: 374px;
   bottom: 296px;
 }
 
-.slide3 .btn{
+.slide3 .btn {
   position: absolute;
   right: 525px;
   bottom: 236px;
 }
 
-.slide4 .btn{
+.slide4 .btn {
   position: absolute;
   left: calc(50% - 100px);
   top: 326px;
 }
 
-.slide5 .btn{
+.slide5 .btn {
   position: absolute;
   right: 504px;
   bottom: 164px;
 }
 
-.slide-container li .btn:hover{
-  
+.slide-container li .btn:hover {
 }
 
 .slide-wrapper .controls {
@@ -179,35 +187,81 @@ nav.active {
 }
 
 /* 기업소개 */
+
 .int {
   height: 600px;
 }
 
-.int ul li {
+.card {
   float: left;
-  width: 299px;
-  margin-right: 24px;
+  width: 300px;
+  height: 378px;
+  margin-left: 24px;
+  position: relative;
+  transition: 1s;
+  transform-style: preserve-3d;
 }
 
-.int ul li:last-child {
-  margin-right: 0px;
+.card .side {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.int ul li p {
-  width: 299px;
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.back p {
+  margin: 128px 0 30px 0;
   text-align: center;
 }
 
-.int ul li img {
-  width: 100%;
-  margin-bottom: 41px;
+.back div {
+  text-align: center;
+}
+
+.back div a {
+  line-height: 27px;
+  color: #fff;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.int_subtitle ul li {
+  float: left;
+  width: 300px;
+  margin: 24px 24px 0 0;
+  text-align: center;
+}
+
+.int_subtitle ul li:last-child {
+  margin-right: 0;
 }
 
 /*tab*/
 
 .nav {
   text-align: center;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .tab-menu li a {
