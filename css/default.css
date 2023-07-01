@@ -281,6 +281,7 @@ nav.active {
 }
 .tab-menu li a {
   transition: 0.3s ease-in;
+  
 }
 
 .tab-wrapper {
@@ -293,6 +294,13 @@ nav.active {
   overflow: hidden;
   list-style: none;
 }
+
+
+.btn:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
 
 .tab-content > div:last-child {
   display: none;
@@ -312,26 +320,27 @@ nav.active {
   float: left;
   width: 50%;
   height: 640px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .sm {
   float: left;
   width: 25%;
   height: 320px;
-}
-
-.tabs-1,
-.tabs-2 {
   overflow: hidden;
+  cursor: pointer;
 }
 
-.tabs-1 section img,
-.tabs-2 section img {
+
+.tabs-1 section a ,
+.tabs-2 section a {
   width: 100%;
   height: 100%;
+  transition: background-color 0.3s ease;
 }
 
-.scale:hover {
+.scale img:hover {
   transform: scale(1.03);
   transition: transform 0.5s ease;
   object-fit: cover;
