@@ -359,16 +359,22 @@ nav.active {
 }
 
 .panel-heading {
+ 
   height: 70px;
   cursor: pointer;
   padding: 22px 30px;
   box-sizing: border-box;
   margin: 1px 0;
+  position: relative;
 }
 
 .panel-heading:hover {
   background-color: #eb0029;
   color: white;
+}
+
+.panel-heading.active {
+  background-color: #eb0029;
 }
 
 .panel-body {
@@ -383,14 +389,47 @@ nav.active {
 
 #btn-collapse {
   margin-bottom: 10px;
-  background-color: #999;
   border: none;
-  color: #fff;
+  color: black;
   cursor: pointer;
   padding: 5px;
   float: right;
 }
 
+.panel-body{
+  height:160px;
+  border: #e7e7e7 solid 1px;
+}
+
+.panel-body p  {
+   padding-bottom: 30px;}
+
+
+.more-btn a{
+color:#eb0029;
+text-decoration:underline;
+
+}
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid #ececec;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  right: 20px;
+  top:30px;
+
+
+}
+
+.panel-heading.active .triangle {
+  transform: rotate(180deg);
+  transform-origin: center 20%; 
+  transition: 0.3s ease-in;
+}
 /*esports*/
 .esport {
   width: 100%;
@@ -398,6 +437,36 @@ nav.active {
   background-image: url(../img/e-sports.png);
   object-fit: cover;
 }
+
+.esport-width{
+
+  width: 1270px;
+  height: 70px;
+  top: calc(50% - 35px);
+  position: relative;
+  margin: 0 auto;
+}
+
+.esport-width p{
+  margin-bottom: 17px;
+}
+
+.p1{
+  font-size: 36px;
+}
+
+.p2{font-size: 24px;
+  }
+
+.esport-btn {
+  right: 0%;
+  top: calc(50% - 20px);
+  position: absolute;
+  
+}
+
+
+
 
 /*footer*/
 footer {
@@ -429,13 +498,14 @@ footer > div > p:nth-child(2) {
 }
 
 .footer-icon {
-  width: 189px;
+  width: 187px;
   height: 53px;
-  line-height: 40px;
   position: absolute;
   right: 0;
   top: calc(50% - 30px);
-  background-color: #fff;
+  background-image: url("../img/logo_footer.png");
+
+
 }
 
 footer:after {
