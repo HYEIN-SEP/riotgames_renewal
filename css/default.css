@@ -2,13 +2,19 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 157px;
+  height: 140px;
   background-color: #000;
-  z-index: 8;
+  z-index: 1;
+  transition: 0.3s;
 }
 
-header .container{
-  height: 157px;
+header.shrink {
+  height: 80px;
+  margin: 0;
+}
+
+header .container {
+  height: 140px;
 }
 
 .logo a {
@@ -20,7 +26,7 @@ header .container{
   background-position: center center;
   background-repeat: no-repeat;
   text-indent: -99999px;
-  margin-top: 51px;
+  margin-top: 42.5px;
 }
 
 header .menu {
@@ -34,6 +40,16 @@ header .menu {
 
 .top_menu {
   padding: 30px 0;
+}
+
+.top_menu.shrink {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.bottom_menu.shrink {
+  margin-top: -65px;
+  transition: 0.3s;
 }
 
 .menu ul li {
@@ -54,7 +70,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 99999;
+  z-index: 1;
   width: 100%;
   height: 470px;
   background-color: #fff;
@@ -65,9 +81,8 @@ nav ul {
   float: left;
   width: 176px;
   height: 470px;
-  /* z-index: 10; */
   text-align: left;
-  padding-left: 30px;
+  padding-left: 34px;
   border-left: 1px solid #000;
 }
 
@@ -97,20 +112,85 @@ nav.active {
 }
 
 /* 모달 */
-input[type="text"]{
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.mdcontent {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  position: relative;
+}
+
+.mdcontent form {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 317px);
+}
+
+input[type="text"] {
   width: 634px;
   height: 70px;
-  border: 1px solid #474747;
   background-color: #e5e5e5;
   border-radius: 50px;
   padding: 0 30px;
   display: block;
-  margin: 0 auto;
-  position: relative;
 }
 
-.modal a i{
+.search {
   position: absolute;
+  right: 30px;
+  top: 30%;
+}
+
+/* 언어설정 */
+.lang {
+  position: absolute;
+  right: 250px;
+  top: 70px;
+  display: none;
+  z-index: 2;
+}
+
+.lang.active {
+  display: block;
+}
+
+.lang ul {
+  width: 130px;
+  height: 295px;
+  padding-left: 20px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.lang ul a {
+  color: #9a9a9a;
+  cursor: pointer;
+}
+
+.lang:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #fff;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 2.5px);
 }
 
 /* 슬라이드 */
@@ -118,7 +198,7 @@ input[type="text"]{
   position: relative;
   width: 100%;
   height: 870px;
-  margin-top: 157px;
+  margin-top: 140px;
   overflow: hidden;
 }
 
@@ -187,6 +267,7 @@ input[type="text"]{
 }
 
 .slide-container li .btn:hover {
+  background-color: #d20028;
 }
 
 .slide-wrapper .controls {
@@ -207,6 +288,29 @@ input[type="text"]{
   right: 246px;
 }
 
+.pager {
+  position: absolute;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  text-align: center;
+}
+
+.pager a {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #fff;
+  text-indent: -9999em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.pager a.active {
+  background: #eb0029;
+}
+
 /* 기업소개 */
 
 .int {
@@ -215,12 +319,16 @@ input[type="text"]{
 
 .card {
   float: left;
-  width: 290px;
+  width: 300px;
   height: 378px;
-  margin-left: 24px;
+  margin-right: 24px;
   position: relative;
   transition: 1s;
   transform-style: preserve-3d;
+}
+
+.int div:nth-child(5) {
+  margin-right: 0px;
 }
 
 .card .side {
@@ -257,10 +365,6 @@ input[type="text"]{
 .back div a {
   line-height: 27px;
   color: #fff;
-}
-
-.card:first-child {
-  margin-left: 0;
 }
 
 .card:hover {

@@ -1,7 +1,6 @@
 // 드롭다운-혜인
 let bottommenu = document.querySelectorAll(".bottom_menu li"),
-    nav = document.querySelector("nav"),
-    header = document.querySelector("header");
+  nav = document.querySelector("nav");
 
 for (let i of bottommenu) {
   i.addEventListener("mouseenter", () => {
@@ -41,11 +40,6 @@ function moveSlide(num) {
   } else {
     prevBtn.classList.remove("disabled");
   }
-
-//   // for (let item of slides) {
-//   //   item.classList.remove("active");
-//   // }
-//   // slides[currentSlideIdx].classList.add("active");
 }
 moveSlide(0);
 
@@ -67,6 +61,70 @@ function autoslide() {
   }, 3000);
 }
 autoslide();
+
+//모달-혜인
+let magnify = document.querySelector(".magnify"),
+  modal = document.querySelector(".modal");
+
+magnify.addEventListener("click", (e) => {
+  modal.style.display = "block";
+  nav.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+  e.target.style.display = "none";
+});
+
+//언어설정 -혜인
+let earth = document.querySelector(".earth"),
+  lang = document.querySelector(".lang"),
+  langs = document.querySelectorAll(".lang ul li a");
+
+earth.addEventListener("click", (e) => {
+  lang.classList.toggle("active");
+  nav.classList.remove("active");
+});
+
+for (item of langs) {
+  item.addEventListener("click", (e) => {
+    for (item of langs) {
+      item.style.color = "#9a9a9a";
+    }
+    e.target.style.color = "#000";
+  });
+}
+
+//shrink -혜인
+let header = document.querySelector("header"),
+  topMenu = document.querySelector(".top_menu"),
+  bottomMenu = document.querySelector(".bottom_menu"),
+  logoa = document.querySelector(".logo a");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.classList.add("shrink");
+    topMenu.classList.add("shrink");
+    bottomMenu.classList.add("shrink");
+    switchImg1();
+  } else {
+    header.classList.remove("shrink");
+    topMenu.classList.remove("shrink");
+    bottomMenu.classList.remove("shrink");
+    switchImg2();
+  }
+});
+
+function switchImg1() {
+  logoa.style.backgroundImage = "url(/images/logo_shrink.png)";
+  logoa.style.width = "55px";
+  logoa.style.marginTop = "12.5px";
+}
+
+function switchImg2() {
+  logoa.style.backgroundImage = "url(/images/logo.png)";
+  logoa.style.width = "196px";
+  logoa.style.marginTop = "42.5px";
+}
 
 //탭-민용
 let tabMenu = document.querySelectorAll(".tab-menu li");
