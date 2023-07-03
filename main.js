@@ -16,6 +16,8 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
   slideContainer = slideWrapper.querySelector(".slide-container"),
   slides = slideContainer.querySelectorAll("li"),
   slideCount = slides.length,
+  pager = slideWrapper.querySelector('.pager'),
+  pagerHTML = '',
   currentSlideIdx = 0,
   prevBtn = slideWrapper.querySelector("#prev"),
   nextBtn = slideWrapper.querySelector("#next");
@@ -23,12 +25,16 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
 if (slideCount > 1) {
   slides.forEach((item, idx) => {
     item.style.left = `${idx * 100}%`;
+    pagerHTML += `<a href="">${idx}</a>`;
   });
 }
+pager.innerHTML = pagerHTML;
+let pagerBtn = pager.querySelectorAll('a');
 
 function moveSlide(num) {
   slideContainer.style.left = `${-num * 100}%`;
   currentSlideIdx = num;
+
 
   if (currentSlideIdx === slideCount - 1) {
     nextBtn.classList.add("disabled");
@@ -40,6 +46,12 @@ function moveSlide(num) {
   } else {
     prevBtn.classList.remove("disabled");
   }
+
+  for(let pg of pagerBtn){
+    pg.classList.remove('active')
+  }
+  pagerBtn[currentSlideIdx].classList.add('active');
+
 }
 moveSlide(0);
 
@@ -54,6 +66,13 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
+pagerBtn.forEach((item,idx)=>{
+  item.addEventListener('click',(e)=>{
+    e.preventDefault();
+    moveSlide(idx);
+  });
+})
+
 function autoslide() {
   timer = setInterval(() => {
     let nextIdx = (currentSlideIdx + 1) % slideCount;
@@ -61,6 +80,13 @@ function autoslide() {
   }, 3000);
 }
 autoslide();
+
+slideWrapper.addEventListener('mouseenter',()=>{
+  clearInterval(timer);
+})
+slideWrapper.addEventListener('mouseleave',()=>{
+  autoslide(timer);
+})
 
 //모달-혜인
 let magnify = document.querySelector(".magnify"),
@@ -101,7 +127,7 @@ let header = document.querySelector("header"),
   logoa = document.querySelector(".logo a");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 0) {
+  if (window.scrollY > 140) {
     header.classList.add("shrink");
     topMenu.classList.add("shrink");
     bottomMenu.classList.add("shrink");
