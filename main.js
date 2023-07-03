@@ -16,8 +16,8 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
   slideContainer = slideWrapper.querySelector(".slide-container"),
   slides = slideContainer.querySelectorAll("li"),
   slideCount = slides.length,
-  pager = slideWrapper.querySelector('.pager'),
-  pagerHTML = '',
+  pager = slideWrapper.querySelector(".pager"),
+  pagerHTML = "",
   currentSlideIdx = 0,
   prevBtn = slideWrapper.querySelector("#prev"),
   nextBtn = slideWrapper.querySelector("#next");
@@ -29,12 +29,11 @@ if (slideCount > 1) {
   });
 }
 pager.innerHTML = pagerHTML;
-let pagerBtn = pager.querySelectorAll('a');
+let pagerBtn = pager.querySelectorAll("a");
 
 function moveSlide(num) {
   slideContainer.style.left = `${-num * 100}%`;
   currentSlideIdx = num;
-
 
   if (currentSlideIdx === slideCount - 1) {
     nextBtn.classList.add("disabled");
@@ -47,11 +46,10 @@ function moveSlide(num) {
     prevBtn.classList.remove("disabled");
   }
 
-  for(let pg of pagerBtn){
-    pg.classList.remove('active')
+  for (let pg of pagerBtn) {
+    pg.classList.remove("active");
   }
-  pagerBtn[currentSlideIdx].classList.add('active');
-
+  pagerBtn[currentSlideIdx].classList.add("active");
 }
 moveSlide(0);
 
@@ -66,39 +64,40 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-pagerBtn.forEach((item,idx)=>{
-  item.addEventListener('click',(e)=>{
+pagerBtn.forEach((item, idx) => {
+  item.addEventListener("click", (e) => {
     e.preventDefault();
     moveSlide(idx);
   });
-})
+});
 
 function autoslide() {
   timer = setInterval(() => {
     let nextIdx = (currentSlideIdx + 1) % slideCount;
     moveSlide(nextIdx);
-  }, 3000);
+  }, 5000);
 }
 autoslide();
 
-slideWrapper.addEventListener('mouseenter',()=>{
+slideWrapper.addEventListener("mouseenter", () => {
   clearInterval(timer);
-})
-slideWrapper.addEventListener('mouseleave',()=>{
+});
+slideWrapper.addEventListener("mouseleave", () => {
   autoslide(timer);
-})
+});
 
 //모달-혜인
 let magnify = document.querySelector(".magnify"),
-  modal = document.querySelector(".modal");
+  modal = document.querySelector(".modal"),
+  mdbg = document.querySelector(".mdbg");
 
-magnify.addEventListener("click", (e) => {
+magnify.addEventListener("click", () => {
   modal.style.display = "block";
   nav.classList.remove("active");
 });
 
-modal.addEventListener("click", (e) => {
-  e.target.style.display = "none";
+mdbg.addEventListener("click", () => {
+  modal.style.display = "none";
 });
 
 //언어설정 -혜인
@@ -117,6 +116,7 @@ for (item of langs) {
       item.style.color = "#9a9a9a";
     }
     e.target.style.color = "#000";
+    lang.classList.remove("active");
   });
 }
 
@@ -124,10 +124,11 @@ for (item of langs) {
 let header = document.querySelector("header"),
   topMenu = document.querySelector(".top_menu"),
   bottomMenu = document.querySelector(".bottom_menu"),
-  logoa = document.querySelector(".logo a");
+  logoa = document.querySelector(".logo a"),
+  headerHeight = header.offsetHeight;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 140) {
+  if (window.scrollY > headerHeight) {
     header.classList.add("shrink");
     topMenu.classList.add("shrink");
     bottomMenu.classList.add("shrink");
