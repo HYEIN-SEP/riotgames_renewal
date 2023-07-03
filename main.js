@@ -178,8 +178,7 @@ tabMenu.forEach((item) => {
 let pheader = document.querySelectorAll(".panel-heading"); //단
 let notice = document.querySelectorAll(".panel-notice"); //내용
 let moreBtn = document.getElementById("btn-collapse"); //더보기버튼
-let triangle = document.querySelector('triangle');
-
+let triangle = document.querySelector("triangle");
 
 notice.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -190,7 +189,6 @@ notice.forEach((item) => {
   });
 });
 
-
 pheader.forEach((item) => {
   item.addEventListener("click", (e) => {
     for (let color of pheader) {
@@ -200,9 +198,6 @@ pheader.forEach((item) => {
   });
 });
 
-
-
-
-triangle.addEventListener('click', () => {
-  triangle.classList.toggle('active');
+triangle.addEventListener("click", () => {
+  triangle.classList.toggle("active");
 });
