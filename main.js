@@ -149,9 +149,11 @@ tabMenu.forEach((item) => {
 });
 
 //아코디언 -민용
-let notice = document.querySelectorAll(".panel-notice");
-let moreBtn = document.getElementById("btn-collapse");
-let pheader = document.querySelectorAll(".panel-heading");
+let pheader = document.querySelectorAll(".panel-heading"); //단
+let notice = document.querySelectorAll(".panel-notice"); //내용
+let moreBtn = document.getElementById("btn-collapse"); //더보기버튼
+let triangle = document.querySelector('triangle');
+
 
 notice.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -162,17 +164,19 @@ notice.forEach((item) => {
   });
 });
 
-moreBtn.addEventListener("click", () => {
-  for (let nb of notice) {
-    nb.classList.remove("active");
-  }
-});
 
 pheader.forEach((item) => {
   item.addEventListener("click", (e) => {
     for (let color of pheader) {
-      color.style.background - image("#eb0029");
+      color.classList.remove("active");
     }
-    e.currentTarget.classList.remove("highlight-bg");
+    e.currentTarget.classList.add("active");
   });
+});
+
+
+
+
+triangle.addEventListener('click', () => {
+  triangle.classList.toggle('active');
 });

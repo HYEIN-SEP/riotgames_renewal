@@ -319,7 +319,7 @@ input[type="text"] {
 
 .card {
   float: left;
-  width: 300px;
+  width: 290px;
   height: 378px;
   margin-right: 24px;
   position: relative;
@@ -389,22 +389,23 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-.tab-menu li a {
-  display: block;
-}
-
-.tab-menu {
+.tab-menu li {
   display: inline-block;
-  vertical-align: top;
+  margin-right: 7px;
 }
 
-.tab-menu section {
-  float: left;
-  margin: 0 12px;
+.tab-menu li:last-child {
+  margin: none;
+  margin-right: -2px;
 }
 
-.tab-menu section:last-child {
-  margin: 0;
+.tab-menu li.active a {
+  color: #fff;
+  background: #eb0029;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.tab-menu li a {
+  transition: 0.3s ease-in;
 }
 
 .tab-wrapper {
@@ -413,13 +414,21 @@ input[type="text"] {
 
 .tab-content {
   width: 100%;
-  list-style-type: none;
   height: 650px;
   overflow: hidden;
+  list-style: none;
 }
 
-#tab-content section:hover {
-  opacity: 0.2;
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+.tab-content > div.active {
+  display: block;
 }
 
 .cf:after {
@@ -431,7 +440,9 @@ input[type="text"] {
 .bg {
   float: left;
   width: 50%;
-  object-fit: cover;
+  height: 640px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .sm {
@@ -439,12 +450,19 @@ input[type="text"] {
   width: 25%;
   height: 320px;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.tabs-1,
-.tab-2 > section img {
+.tabs-1 section a,
+.tabs-2 section a {
   width: 100%;
   height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.scale img:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
   object-fit: cover;
 }
 
@@ -466,11 +484,16 @@ input[type="text"] {
   padding: 22px 30px;
   box-sizing: border-box;
   margin: 1px 0;
+  position: relative;
 }
 
 .panel-heading:hover {
   background-color: #eb0029;
   color: white;
+}
+
+.panel-heading.active {
+  background-color: #eb0029;
 }
 
 .panel-body {
@@ -485,33 +508,76 @@ input[type="text"] {
 
 #btn-collapse {
   margin-bottom: 10px;
-  background-color: #999;
   border: none;
-  color: #fff;
+  color: black;
   cursor: pointer;
   padding: 5px;
   float: right;
 }
 
-.tab-content {
-  height: 640px;
-  list-style: none;
+.panel-body {
+  height: 160px;
+  border: #e7e7e7 solid 1px;
 }
 
-.tab-content > div:last-child {
-  display: none;
+.panel-body p {
+  padding-bottom: 30px;
 }
 
-.tab-content > div.active {
-  display: block;
+.more-btn a {
+  color: #eb0029;
+  text-decoration: underline;
 }
 
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid #ececec;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+.panel-heading.active .triangle {
+  transform: rotate(180deg);
+  transform-origin: center 20%;
+  transition: 0.3s ease-in;
+}
 /*esports*/
 .esport {
   width: 100%;
   height: 378px;
   background-image: url(../img/e-sports.png);
   object-fit: cover;
+}
+
+.esport-width {
+  width: 1270px;
+  height: 70px;
+  top: calc(50% - 35px);
+  position: relative;
+  margin: 0 auto;
+}
+
+.esport-width p {
+  margin-bottom: 17px;
+}
+
+.p1 {
+  font-size: 36px;
+}
+
+.p2 {
+  font-size: 24px;
+}
+
+.esport-btn {
+  right: 0%;
+  top: calc(50% - 20px);
+  position: absolute;
 }
 
 /*footer*/
@@ -538,23 +604,26 @@ footer {
   margin: 50px 30px 52px 0px;
 }
 
+.footer-link a:hover {
+  color: #d3d3d3;
+}
+
 footer > div > p:nth-child(2) {
   color: #9a9a9a;
   font-family: "NanumBarunGothic";
 }
 
 .footer-icon {
-  width: 189px;
+  width: 187px;
   height: 53px;
-  line-height: 40px;
   position: absolute;
   right: 0;
   top: calc(50% - 30px);
-  background-color: #fff;
+  background-image: url("../img/logo_footer.png");
 }
 
-footer:after {
-  content: "";
+.footer-icon:hover {
+  background-image: url("../img/logo_footer2.png");
 }
 
 .footer2 {
