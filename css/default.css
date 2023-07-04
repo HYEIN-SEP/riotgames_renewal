@@ -642,6 +642,8 @@ footer > div > p:nth-child(2) {
   right: 0;
   top: calc(50% - 30px);
   background-image: url("../img/logo_footer.png");
+  background-repeat: no-repeat;
+  text-indent: -99999px;
 }
 
 .footer-icon:hover {
