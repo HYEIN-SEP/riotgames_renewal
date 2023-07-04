@@ -239,3 +239,5 @@ pheader.forEach((item) => {
 triangle.addEventListener("click", () => {
   triangle.classList.toggle("active");
 });
+
+
