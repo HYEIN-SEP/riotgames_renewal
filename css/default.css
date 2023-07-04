@@ -23,7 +23,7 @@ header.shrink {
   width: 196px;
   height: 55px;
   float: left;
-  background-image: url(../images/logo.png);
+  background-image: url(images/logo.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -222,7 +222,7 @@ input[type="text"] {
 }
 
 .slide1 {
-  background-image: url(../images/slide1.png);
+  background-image: url(images/slide1.png);
 }
 .slide2 {
   background-image: url(images/slide2.png);
