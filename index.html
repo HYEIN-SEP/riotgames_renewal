@@ -1,426 +1,503 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>riotgames renewal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>riotgames renewal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet" />
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/default.css" />
-</head>
-
-<body>
-  <!-- popup-혜인 -->
-  <dialog class="popup" open>
-    <h1 class="highlight mid-tt">
-      라이엇게임즈 리뉴얼 프로젝트
-    </h1>
-    <p>본사이트는 팀 프로젝트 포트폴리오 사이트입니다.<br>
-      라이엇게임즈와는 무관함을 안내드립니다.<br>
-      이 사이트에 사용된 이미지의 저작권은 라이엇게임즈에 있으므로,<br>
-      무단으로 사용할 수 없습니다.
-    </p>
-    <hr>
-    <p>
-      제작기간 : 2023.05.19 ~ 2023.07.05<br>
-      특징 : html, css, vanila js<br>
-      구현페이지 : 라이엇게임즈 메인페이지
-    </p>
-    <hr>
-    <p>
-      팀원 : 박혜인, 박민용<br>
-      담당파트<br>
-      공통 : 기획, 디자인<br>
-      박혜인 : 메뉴, 슬라이드, 기업소개<br>
-      박민용 : 게임소개, 최근소식, e스포츠, 푸터
-    </p>
-    <div>
-      <label for="daycheck">오늘 하루 안보기</label>
-      <input type="checkbox" id="daycheck">
-      <button type="button" id="close">Close</button>
-    </div>
-  </dialog>
-
-  <!-- header-혜인 -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="">라이엇게임즈</a>
+  <body>
+    <!-- popup-혜인 -->
+    <dialog class="popup">
+      <h1 class="highlight mid-tt">라이엇게임즈 리뉴얼 프로젝트</h1>
+      <p>
+        본사이트는 팀 프로젝트 포트폴리오 사이트입니다.<br />
+        라이엇게임즈와는 무관함을 안내드립니다.<br />
+        이 사이트에 사용된 이미지의 저작권은 라이엇게임즈에 있으므로,<br />
+        무단으로 사용할 수 없습니다.
+      </p>
+      <hr />
+      <p>
+        제작기간 : 2023.05.19 ~ 2023.07.05<br />
+        특징 : html, css, vanila js<br />
+        구현페이지 : 라이엇게임즈 메인페이지
+      </p>
+      <hr />
+      <p>
+        팀원 : 박혜인, 박민용<br />
+        담당파트<br />
+        공통 : 기획, 디자인<br />
+        박혜인 : 메뉴, 슬라이드, 기업소개<br />
+        박민용 : 게임소개, 최근소식, e스포츠, 푸터
+      </p>
+      <div>
+        <label for="daycheck">오늘 하루 안보기</label>
+        <input type="checkbox" id="daycheck" />
+        <button type="button" id="close">Close</button>
       </div>
-      <div class="menu main-tt">
-        <ul class="top_menu">
-          <li>
-            <a class="magnify">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-solid fa-circle-user"></i>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-solid fa-comments"></i>
-            </a>
-          </li>
-          <li>
-            <a class="earth">
-              <i class="fa-solid fa-earth-asia"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="bottom_menu">
-          <li><a href="">라이엇소개</a></li>
-          <li><a href="">게임</a></li>
-          <li><a href="">라이엇포지</a></li>
-          <li><a href="">e스포츠</a></li>
-          <li><a href="">엔터테인먼트</a></li>
-          <li><a href="">소식</a></li>
-        </ul>
-      </div>
-      <nav class="drop_menu small-pg sdw">
-        <div class="menuwrap container">
-          <ul>
-            <li>라이엇 소개</li>
+    </dialog>
+
+    <!-- header-혜인 -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="">라이엇게임즈</a>
+        </div>
+        <div class="menu main-tt">
+          <ul class="top_menu">
+            <li>
+              <a class="magnify">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-circle-user"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-comments"></i>
+              </a>
+            </li>
+            <li>
+              <a class="earth">
+                <i class="fa-solid fa-earth-asia"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="bottom_menu">
             <li><a href="">라이엇소개</a></li>
-            <li><a href="">다양성과 포용</a></li>
-            <li><a href="">사회공헌</a></li>
-            <li><a href="">채용공고</a></li>
-            <li><a href="">지역오피스</a></li>
-            <li><a href="">라이엇에서의 생활</a></li>
-          </ul>
-          <ul>
-            <li>게임</li>
-            <li><a href="">리그오브레전드</a></li>
-            <li><a href="">발로란트</a></li>
-            <li><a href="">전략적팀전투</a></li>
-            <li><a href="">레전드오브룬테라</a></li>
-            <li>
-              <a href="">리그오브레전드:<br />와일드리프트</a>
-            </li>
-          </ul>
-          <ul>
-            <li>라이엇포지</li>
-            <li><a href="">시간/교차</a></li>
-            <li><a href="">마법공학아수라장</a></li>
-            <li><a href="">마력척결관</a></li>
-            <li><a href="">몰락한왕</a></li>
-            <li><a href="">누누의노래</a></li>
-          </ul>
-          <ul>
-            <li>e스포츠</li>
-            <li>
-              <a href="">리그오브레전드<br />e스포츠</a>
-            </li>
-            <li>
-              <a href="">발로란트<br />e스포츠</a>
-            </li>
-          </ul>
-          <ul>
-            <li>엔터테인먼트</li>
-            <li><a href="">아케인</a></li>
-            <li><a href="">유니버스</a></li>
-            <li><a href="">라이엇게임즈뮤직</a></li>
-          </ul>
-          <ul>
-            <li>소식</li>
-            <li><a href="">공지사항</a></li>
+            <li><a href="">게임</a></li>
+            <li><a href="">라이엇포지</a></li>
+            <li><a href="">e스포츠</a></li>
+            <li><a href="">엔터테인먼트</a></li>
+            <li><a href="">소식</a></li>
           </ul>
         </div>
-      </nav>
-    </div>
-
-    <!-- 검색모달-혜인 -->
-    <div class="modal">
-      <div class="mdcontent">
-        <form>
-          <input type="text" name="modal" id="modal" placeholder="2023 리그오브레전드 월드챔피언십" onfocus="this.placeholder=''"
-            onblur="this.placeholder='2023 리그오브레전드 월드챔피언십'">
-          <div class="search mid-tt">
-            <a href="">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
+        <nav class="drop_menu small-pg sdw">
+          <div class="menuwrap container">
+            <ul>
+              <li>라이엇 소개</li>
+              <li><a href="">라이엇소개</a></li>
+              <li><a href="">다양성과 포용</a></li>
+              <li><a href="">사회공헌</a></li>
+              <li><a href="">채용공고</a></li>
+              <li><a href="">지역오피스</a></li>
+              <li><a href="">라이엇에서의 생활</a></li>
+            </ul>
+            <ul>
+              <li>게임</li>
+              <li><a href="">리그오브레전드</a></li>
+              <li><a href="">발로란트</a></li>
+              <li><a href="">전략적팀전투</a></li>
+              <li><a href="">레전드오브룬테라</a></li>
+              <li>
+                <a href="">리그오브레전드:<br />와일드리프트</a>
+              </li>
+            </ul>
+            <ul>
+              <li>라이엇포지</li>
+              <li><a href="">시간/교차</a></li>
+              <li><a href="">마법공학아수라장</a></li>
+              <li><a href="">마력척결관</a></li>
+              <li><a href="">몰락한왕</a></li>
+              <li><a href="">누누의노래</a></li>
+            </ul>
+            <ul>
+              <li>e스포츠</li>
+              <li>
+                <a href="">리그오브레전드<br />e스포츠</a>
+              </li>
+              <li>
+                <a href="">발로란트<br />e스포츠</a>
+              </li>
+            </ul>
+            <ul>
+              <li>엔터테인먼트</li>
+              <li><a href="">아케인</a></li>
+              <li><a href="">유니버스</a></li>
+              <li><a href="">라이엇게임즈뮤직</a></li>
+            </ul>
+            <ul>
+              <li>소식</li>
+              <li><a href="">공지사항</a></li>
+            </ul>
           </div>
-        </form>
+        </nav>
       </div>
-      <div class="mdbg"></div>
-    </div>
 
-    <!-- 언어설정-혜인 -->
-    <div class="lang sdw">
-      <ul class="small-pg light-g3">
-        <li><a>한국어</a></li>
-        <li><a>ENGLISH (NA)</a></li>
-        <li><a>INDONESIAN</a></li>
-        <li><a>MALAYSIAN</a></li>
-        <li><a>PORTUGUÊS</a></li>
-        <li><a>EŠTINA</a></li>
-        <li><a>FRANÇAIS</a></li>
-        <li><a>DEUTSCH</a></li>
-        <li><a>ΕΛΛΗΝΙΚΆ</a></li>
-        <li><a>MAGYAR</a></li>
-        <li><a>ITALIANO</a></li>
-        <li><a>日本語</a></li>
-        <li><a>ESPAÑOL (LATAM)</a></li>
-        <li><a>POLSKI</a></li>
-        <li><a>ROMÂNĂ</a></li>
-        <li><a>РУССКИЙ</a></li>
-        <li><a>简体中文</a></li>
-        <li><a>ESPAÑOL (EUW)</a></li>
-        <li><a>繁體中文</a></li>
-        <li><a>TÜRKÇE</a></li>
-        <li><a>TIẾNG VIỆT</a></li>
-      </ul>
-    </div>
-  </header>
+      <!-- 검색모달-혜인 -->
+      <div class="modal">
+        <div class="mdcontent">
+          <form>
+            <input
+              type="text"
+              name="modal"
+              id="modal"
+              placeholder="2023 리그오브레전드 월드챔피언십"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='2023 리그오브레전드 월드챔피언십'"
+            />
+            <div class="search mid-tt">
+              <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="mdbg"></div>
+      </div>
 
-  <main>
-    <!-- slide-혜인 -->
-    <div class="slide-wrapper big-pd">
-      <ul class="slide-container">
-        <li class="slide1">
-          <a href="" class="btn highlight-bg wt sdw">알아보기</a>
-        </li>
-        <li class="slide2">
-          <a href="" class="btn highlight-bg wt sdw">알아보기</a>
-        </li>
-        <li class="slide3">
-          <a href="" class="btn highlight-bg wt sdw">구매하기</a>
-        </li>
-        <li class="slide4">
-          <a href="" class="btn highlight-bg wt sdw">구매하기</a>
-        </li>
-        <li class="slide5">
-          <a href="" class="btn highlight-bg wt sdw">구매하기</a>
-        </li>
-      </ul>
-      <a id="prev" class="controls mid-tt wt"><i class="fa-solid fa-chevron-left"></i></a>
-      <a id="next" class="controls mid-tt wt"><i class="fa-solid fa-chevron-right"></i></a>
-      <p class="pager sm-pd">
-        <!-- <a>0</a>
+      <!-- 언어설정-혜인 -->
+      <div class="lang sdw">
+        <ul class="small-pg light-g3">
+          <li><a>한국어</a></li>
+          <li><a>ENGLISH (NA)</a></li>
+          <li><a>INDONESIAN</a></li>
+          <li><a>MALAYSIAN</a></li>
+          <li><a>PORTUGUÊS</a></li>
+          <li><a>EŠTINA</a></li>
+          <li><a>FRANÇAIS</a></li>
+          <li><a>DEUTSCH</a></li>
+          <li><a>ΕΛΛΗΝΙΚΆ</a></li>
+          <li><a>MAGYAR</a></li>
+          <li><a>ITALIANO</a></li>
+          <li><a>日本語</a></li>
+          <li><a>ESPAÑOL (LATAM)</a></li>
+          <li><a>POLSKI</a></li>
+          <li><a>ROMÂNĂ</a></li>
+          <li><a>РУССКИЙ</a></li>
+          <li><a>简体中文</a></li>
+          <li><a>ESPAÑOL (EUW)</a></li>
+          <li><a>繁體中文</a></li>
+          <li><a>TÜRKÇE</a></li>
+          <li><a>TIẾNG VIỆT</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- slide-혜인 -->
+      <div class="slide-wrapper big-pd">
+        <ul class="slide-container">
+          <li class="slide1">
+            <a href="" class="btn highlight-bg wt sdw">알아보기</a>
+          </li>
+          <li class="slide2">
+            <a href="" class="btn highlight-bg wt sdw">알아보기</a>
+          </li>
+          <li class="slide3">
+            <a href="" class="btn highlight-bg wt sdw">구매하기</a>
+          </li>
+          <li class="slide4">
+            <a href="" class="btn highlight-bg wt sdw">구매하기</a>
+          </li>
+          <li class="slide5">
+            <a href="" class="btn highlight-bg wt sdw">구매하기</a>
+          </li>
+        </ul>
+        <a id="prev" class="controls mid-tt wt"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></a>
+        <a id="next" class="controls mid-tt wt"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
+        <p class="pager sm-pd">
+          <!-- <a>0</a>
         <a>1</a>
         <a>2</a>
         <a>3</a>
         <a>4</a> -->
-      </p>
-    </div>
+        </p>
+      </div>
 
-    <!-- 기업소개-혜인 -->
-    <section class="container">
-      <div class="int big-pd">
-        <div  class="mid-tt md-pd">
-          <h3>기업소개</h3>
+      <!-- 기업소개-혜인 -->
+      <section class="container">
+        <div class="int big-pd">
+          <div class="mid-tt md-pd">
+            <h3>기업소개</h3>
+          </div>
+          <div class="card">
+            <div class="side">
+              <img src="images/int1.png" alt="int1" />
+            </div>
+            <div class="back small-pg wt">
+              <p>
+                e스포츠의 인기와 규모는<br />나날이 커지고 있으며 많은
+                스타들을<br />탄생시키고 있습니다.
+              </p>
+              <div><a href="">더보기</a></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="side">
+              <img src="images/int2.png" alt="int2" />
+            </div>
+            <div class="back small-pg wt">
+              <p>
+                유저들의 꾸준한 사랑을 받는<br />리그오브레전드는 10년이 지난<br />현재까지
+                그 위상을 지키고 있습니다.
+              </p>
+              <div><a href="">더보기</a></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="side">
+              <img src="images/int3.png" alt="int3" />
+            </div>
+            <div class="back small-pg wt">
+              <p>
+                리그오브레전드와 발로란트 리그는<br />세대를 아우르는 이스포츠
+                리그로<br />성장하고 있습니다.
+              </p>
+              <div><a href="">더보기</a></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="side">
+              <img src="images/int4.png" alt="int4" />
+            </div>
+            <div class="back small-pg wt">
+              <p>
+                라이엇게임즈 코리아는<br />올해로 만 11년째 ‘한국문화유산<br />보호
+                및 지원’ 프로젝트를<br />진행 중입니다.
+              </p>
+              <div><a href="">더보기</a></div>
+            </div>
+          </div>
+          <div class="int_subtitle sub-tt">
+            <ul>
+              <li>
+                <p>세계적인 e스포츠 선수들을<br />배출해 낸 리그오브레전드</p>
+              </li>
+              <li>
+                <p>세계에서 가장 많이<br />플레이하는 PC 게임</p>
+              </li>
+              <li>
+                <p>e스포츠의 미래를<br />만들어가는 라이엇</p>
+              </li>
+              <li>
+                <p>게임은 문화이며, 우리<br />문화의 뿌리는 문화유산</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="card">
-          <div class="side">
-            <img src="images/int1.png" alt="int1"/>
-          </div>
-          <div class="back small-pg wt">
-            <p>e스포츠의 인기와 규모는<br>나날이 커지고 있으며 많은 스타들을<br>탄생시키고 있습니다.</p>
-            <div><a href="">더보기</a></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="side">
-            <img src="images/int2.png" alt="int2"/>
-          </div>
-          <div class="back small-pg wt">
-            <p>유저들의 꾸준한 사랑을 받는<br>리그오브레전드는 10년이 지난<br>현재까지 그 위상을 지키고 있습니다.</p>
-            <div><a href="">더보기</a></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="side">
-            <img src="images/int3.png" alt="int3"/>
-          </div>
-          <div class="back small-pg wt">
-            <p>리그오브레전드와 발로란트 리그는<br>세대를 아우르는 이스포츠 리그로<br>성장하고 있습니다.</p>
-            <div><a href="">더보기</a></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="side">
-            <img src="images/int4.png" alt="int4"/>
-          </div>
-          <div class="back small-pg wt">
-            <p>라이엇게임즈 코리아는<br>올해로 만 11년째 ‘한국문화유산<br>보호 및 지원’ 프로젝트를<br>진행 중입니다.</p>
-            <div><a href="">더보기</a></div>
-          </div>
-        </div>
-        <div class="int_subtitle sub-tt">
-          <ul>
-            <li>
-              <p>세계적인 e스포츠 선수들을<br/>배출해 낸 리그오브레전드</p>
+      </section>
+
+      <!-- tab-민용 -->
+      <div class="tab-wrapper">
+        <div class="nav">
+          <ul class="tab-menu md-pd">
+            <li data-num="0" class="tab-btn1 active sub-tt">
+              <a class="btn bk light-g1-bg bk" href="#tabs-1">라이엇게임</a>
             </li>
-            <li>
-              <p>세계에서 가장 많이<br/>플레이하는 PC 게임</p>
-            </li>
-            <li>
-              <p>e스포츠의 미래를<br/>만들어가는 라이엇</p>
-            </li>
-            <li>
-              <p>게임은 문화이며, 우리<br/>문화의 뿌리는 문화유산</p>
+            <li data-num="1" class="tab-btn2 sub-tt">
+              <a class="btn bk light-g1-bg bk" href="#tabs-2">라이엇포지</a>
             </li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- tab-민용 -->
-    <div class="tab-wrapper">
-      <div class="nav">
-        <ul class="tab-menu md-pd">
-          <li data-num="0" class="tab-btn1 active sub-tt"><a class=" btn bk light-g1-bg bk " href="#tabs-1">라이엇게임</a>
-          </li>
-          <li data-num="1" class="tab-btn2 sub-tt"><a class=" btn bk light-g1-bg bk " href="#tabs-2">라이엇포지</a></li>
-        </ul>
-      </div>
-
-      <div class="tab-content big-pd ">
-        <div class="tabs-1 cf">
-          <div class='bg scale'><img src="img/riot_1.png" alt="Riotgame_img 1">
+        <div class="tab-content big-pd">
+          <div class="tabs-1 cf">
+            <div class="bg scale">
+              <img src="img/riot_1.png" alt="Riotgame_img 1" />
+            </div>
+            <div class="sm scale">
+              <img src="img/riot_2.png" alt="Riotgame_img 2" />
+            </div>
+            <div class="sm scale">
+              <img src="img/riot_3.png" alt="Riotgame_img 3" />
+            </div>
+            <div class="sm scale">
+              <img src="img/riot_4.png" alt="Riotgame_img 4" />
+            </div>
+            <div class="sm scale">
+              <img src="img/riot_5.png" alt="Riotgame_img 5" />
+            </div>
           </div>
-          <div class='sm scale'><img src="img/riot_2.png" alt="Riotgame_img 2"></div>
-          <div class='sm scale'><img src="img/riot_3.png" alt="Riotgame_img 3"></div>
-          <div class='sm scale'><img src="img/riot_4.png" alt="Riotgame_img 4"></div>
-          <div class='sm scale'><img src="img/riot_5.png" alt="Riotgame_img 5"></div>
-
+          <div class="tabs-2 cf">
+            <div class="bg scale">
+              <img src="img/forge_1.png" alt="forgegame_img 1" />
+            </div>
+            <div class="sm scale">
+              <img src="img/forge_2.png" alt="forgegame_img 2" />
+            </div>
+            <div class="sm scale">
+              <img src="img/forge_3.png" alt="forgegame_img 3" />
+            </div>
+            <div class="sm scale">
+              <img src="img/forge_4.png" alt="forgegame_img 4" />
+            </div>
+            <div class="sm scale">
+              <img src="img/forge_5.png" alt="forgegame_img 5" />
+            </div>
+          </div>
         </div>
-        <div class="tabs-2 cf">
-          <div class='bg scale'><img src="img/forge_1.png" alt="forgegame_img 1"></div>
-          <div class='sm scale'><img src="img/forge_2.png" alt="forgegame_img 2"></div>
-          <div class='sm scale'><img src="img/forge_3.png" alt="forgegame_img 3"></div>
-          <div class='sm scale'><img src="img/forge_4.png" alt="forgegame_img 4"></div>
-          <div class='sm scale'><img src="img/forge_5.png" alt="forgegame_img 5"></div>
+
+        <!-- accordian-민용 -->
+        <div class="container">
+          <h2 class="mid-tt md-pd">최근소식</h2>
+          <section class="faq big-pd">
+            <div class="panel-notice active">
+              <div class="panel-heading main-tt bk-bg wt">
+                <div class="triangle"></div>
+                <h3>[시간/교차: 리그 오브 레전드 이야기] 출시</h3>
+              </div>
+              <div class="panel-body main-tt">
+                <p>
+                  Double Stallion Games가 제작한 [시간/교차: 리그 오브 레전드
+                  이야기]는 에코의 시공간을 넘나드는 능력을 바탕으로 역동적인
+                  전투와 독특한 탐험 기회를 제공하는 스토리 중심의 싱글 플레이어
+                  2D 액션 플랫폼 게임입니다. 과거의 행동을 되돌려 실수를
+                  바로잡고 새로 등장하는 적보다 한발 앞서 나가세요. 과연 자운의
+                  미래를 구할 수 있을까요?
+                </p>
+                <p class="more-btn"><a href="">더보기</a></p>
+              </div>
+            </div>
+
+            <div class="panel-notice main-tt">
+              <div class="panel-heading main-tt bk-bg wt">
+                <div class="triangle"></div>
+                <h3>라이엇 클라이언트에 백그라운드 패치 도입</h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  우리 모두 한 번씩은 그런 경험이 있죠. 길고 힘든 하루를 보낸 후
+                  그저 제일 좋아하는 게임을 플레이하고 싶을 뿐인데 컴퓨터 앞에
+                  앉아서 접속하려 했더니 패치를 설치해야 합니다! 왜 게임은
+                  플레이하고 싶을 때 바로 준비되어 있지 않을까요? 이제 자리를
+                  비우실 동안 게임을 자동으로 패치하는 기능이 추가되어 업데이트
+                  진행률 막대를 쳐다보며 기다리실 필요가 없어집니다. 라이엇
+                  클라이언트가 실행 중이라면 백그라운드 패치를 통해 라이엇
+                  클라이언트에서 모든 게임의 패치를 다운로드하여 설치할 수
+                  있습니다. 백그라운드 패치를 활성화하면 게임을 최신 버전으로
+                  유지하여 언제든 즉시 게임을 플레이할 수 있습니다! 향후에는
+                  전원을 켜면 라이엇 클라이언트가 자동으로 실행되는 기능을
+                  출시할 계획입니다.
+                </p>
+                <p class="more-btn"><a href="">더보기</a></p>
+              </div>
+            </div>
+
+            <div class="panel-notice main-tt">
+              <div class="panel-heading main-tt bk-bg wt">
+                <div class="triangle"></div>
+                <h3>마력 철격관 - 지금 구매 가능</h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  문라이터 개발사 Digital Sun에서 제작한 마력 척결관: 리그 오브
+                  레전드 이야기™는 리그 오브 레전드 세계관을 배경으로 펼쳐지는
+                  액션 RPG 게임입니다. 데마시아 왕국의 마력 척결단은
+                  공공질서라는 명목 아래 마법을 사용할 줄 아는 시민을 탄압하고
+                  있습니다. 강제로 입단시켜 세뇌하고, 감옥에 감금하고, 음지로
+                  내쫓는 등 횡포를 부리고 있죠. 마력 척결단에 의해 부당한
+                  감옥살이를 했던 사일러스가 되어보세요. 마법을 훔치는 마법사의
+                  힘을 마음껏 발휘할 기회입니다. 구속의 상징이었던 사슬로 고향을
+                  마력 척결단의 손아귀에서 조금씩 해방하세요.
+                </p>
+                <p class="more-btn"><a href="">더보기</a></p>
+              </div>
+            </div>
+
+            <div class="panel-notice main-tt">
+              <div class="panel-heading main-tt bk-bg wt">
+                <div class="triangle"></div>
+                <h3>
+                  플레이어 여러분이 투표해주신 자선단체가 총 600만 달러의
+                  지원금을 받습니다.
+                </h3>
+              </div>
+              <div class="panel-body">
+                <p>
+                  플레이어 여러분이 별 수호자를 지원하거나 발로란트 자선 세트를
+                  구매하여 모금해주신 기부금은 라이엇 게임즈 사회공헌 펀드에
+                  전달되었습니다. 이 펀드는 더 나은 세상을 만드는 단체에 직접
+                  투자하기 위해 2019년에 출범했습니다. 12월에 지원금을 세계
+                  각지의 비영리 단체에 어떻게 배분할지 정하는 데 플레이어
+                  여러분에게 도움을 요청했습니다. 올해 기부 투표 캠페인에서는 총
+                  600만 달러(미화로 550,000개 상당의 별 수호자 탈리야 스킨)를
+                  배정하여 전 세계 자선 단체에 기부합니다. 28개 지역마다 기후
+                  변화, 교육, 성평등 등 다양한 분야에서 영향력을 발휘하는 비영리
+                  단체 3곳을 선정했으며 이 단체 중 한 곳에 투표하도록 했습니다.
+                  경쟁은 저희 전문 분야지만, 모든 비영리 단체가 승리자라고
+                  생각하기 때문에 가장 많은 투표를 받은 비영리 단체가 해당
+                  국가에 배정된 지원금 중 50%를 가져가며, 다른 두 단체는 각각
+                  25%를 가져갑니다. 목록의 모든 단체는 최소 15,000달러의
+                  지원금을 받습니다.
+                </p>
+                <p class="more-btn"><a href="">더보기</a></p>
+              </div>
+            </div>
+            <a class="btn-collapse" href="#"
+              >더보기 <i class="fa-solid fa-circle-chevron-right"></i
+            ></a>
+          </section>
+        </div>
+
+        <!-- e-sport-민용 -->
+        <div class="esport">
+          <div class="esport-width">
+            <p class="p1 wt mid-tt">E-sports</p>
+            <p class="p2 wt">리그오브레전드,발로란트 E-sports리그</p>
+            <a class="esport-btn btn highlight-bg wt main-tt" href=""
+              >알아보기</a
+            >
+          </div>
         </div>
       </div>
-
-      <!-- accordian-민용 -->
-      <div class="container">
-
-        <h2 class="mid-tt md-pd">최근소식</h2>
-        <section class="faq big-pd">
-          <div class="panel-notice active ">
-            <div class="panel-heading main-tt bk-bg wt ">
-              <div class="triangle"></div>
-              <h3>[시간/교차: 리그 오브 레전드 이야기] 출시</h3>
-            </div>
-            <div class="panel-body main-tt ">
-              <p>Double Stallion Games가 제작한 [시간/교차: 리그 오브 레전드 이야기]는 에코의 시공간을 넘나드는 능력을 바탕으로 역동적인 전투와 독특한 탐험 기회를 제공하는 스토리
-                중심의
-                싱글 플레이어 2D 액션 플랫폼 게임입니다. 과거의 행동을 되돌려 실수를 바로잡고 새로 등장하는 적보다 한발 앞서 나가세요. 과연 자운의 미래를 구할 수 있을까요?</p>
-              <p class="more-btn"><a href="">더보기</a></p>
-            </div>
-          </div>
-
-          <div class="panel-notice main-tt">
-            <div class="panel-heading main-tt bk-bg wt ">
-              <div class="triangle"></div>
-              <h3>라이엇 클라이언트에 백그라운드 패치 도입</h3>
-            </div>
-            <div class="panel-body">
-              <p>우리 모두 한 번씩은 그런 경험이 있죠. 길고 힘든 하루를 보낸 후 그저 제일 좋아하는 게임을 플레이하고 싶을 뿐인데 컴퓨터 앞에 앉아서 접속하려 했더니 패치를 설치해야 합니다!
-
-                왜 게임은 플레이하고 싶을 때 바로 준비되어 있지 않을까요? 이제 자리를 비우실 동안 게임을 자동으로 패치하는 기능이 추가되어 업데이트 진행률 막대를 쳐다보며 기다리실 필요가 없어집니다.
-
-                라이엇 클라이언트가 실행 중이라면 백그라운드 패치를 통해 라이엇 클라이언트에서 모든 게임의 패치를 다운로드하여 설치할 수 있습니다. 백그라운드 패치를 활성화하면 게임을 최신 버전으로
-                유지하여
-                언제든 즉시 게임을 플레이할 수 있습니다! 향후에는 전원을 켜면 라이엇 클라이언트가 자동으로 실행되는 기능을 출시할 계획입니다.</p>
-              <p class="more-btn"><a href="">더보기</a></p>
-            </div>
-          </div>
-
-          <div class="panel-notice main-tt">
-            <div class="panel-heading main-tt bk-bg wt">
-              <div class="triangle"></div>
-              <h3>마력 철격관 - 지금 구매 가능</h3>
-            </div>
-            <div class="panel-body">
-              <p>문라이터 개발사 Digital Sun에서 제작한 마력 척결관: 리그 오브 레전드 이야기™는 리그 오브 레전드 세계관을 배경으로 펼쳐지는 액션 RPG 게임입니다. 데마시아 왕국의 마력
-                척결단은
-                공공질서라는 명목 아래 마법을 사용할 줄 아는 시민을 탄압하고 있습니다. 강제로 입단시켜 세뇌하고, 감옥에 감금하고, 음지로 내쫓는 등 횡포를 부리고 있죠.
-
-                마력 척결단에 의해 부당한 감옥살이를 했던 사일러스가 되어보세요. 마법을 훔치는 마법사의 힘을 마음껏 발휘할 기회입니다. 구속의 상징이었던 사슬로 고향을 마력 척결단의 손아귀에서 조금씩
-                해방하세요.</p>
-              <p class="more-btn"><a href="">더보기</a></p>
-
-
-            </div>
-          </div>
-
-          <div class="panel-notice main-tt">
-            <div class="panel-heading main-tt bk-bg wt">
-              <div class="triangle"></div>
-              <h3>플레이어 여러분이 투표해주신 자선단체가 총 600만 달러의 지원금을 받습니다.</h3>
-            </div>
-            <div class="panel-body">
-              <p>플레이어 여러분이 별 수호자를 지원하거나 발로란트 자선 세트를 구매하여 모금해주신 기부금은 라이엇 게임즈 사회공헌 펀드에 전달되었습니다. 이 펀드는 더 나은 세상을 만드는 단체에 직접
-                투자하기
-                위해 2019년에 출범했습니다. 12월에 지원금을 세계 각지의 비영리 단체에 어떻게 배분할지 정하는 데 플레이어 여러분에게 도움을 요청했습니다.
-
-                올해 기부 투표 캠페인에서는 총 600만 달러(미화로 550,000개 상당의 별 수호자 탈리야 스킨)를 배정하여 전 세계 자선 단체에 기부합니다. 28개 지역마다 기후 변화, 교육,
-                성평등
-                등
-                다양한 분야에서 영향력을 발휘하는 비영리 단체 3곳을 선정했으며 이 단체 중 한 곳에 투표하도록 했습니다.
-
-                경쟁은 저희 전문 분야지만, 모든 비영리 단체가 승리자라고 생각하기 때문에 가장 많은 투표를 받은 비영리 단체가 해당 국가에 배정된 지원금 중 50%를 가져가며, 다른 두 단체는 각각
-                25%를
-                가져갑니다. 목록의 모든 단체는 최소 15,000달러의 지원금을 받습니다.</p>
-              <p class="more-btn"><a href="">더보기</a></p>
-
-            </div>
-          </div>
-          <a class="btn-collapse" href="#">더보기 <i class="fa-solid fa-circle-chevron-right"></i></a>
-
-        </section>
-      </div>
-
-      <!-- e-sport-민용 -->
-      <div class="esport">
-        <div class='esport-width'>
-          <p class="p1 wt mid-tt">E-sports</p>
-          <P class="p2 wt">리그오브레전드,발로란트 E-sports리그 </P>
-          <a class="esport-btn btn highlight-bg wt main-tt" href="">알아보기</a>
-
-
+    </main>
+    <!-- footer-민용 -->
+    <footer>
+      <div class="footer-width">
+        <div class="footer-link">
+          <a href="">라이엇스토어</a>
+          <a href="">라이엇모바일</a>
+          <a href="">인재채용 </a>
+          <a href="">문의등록</a>
+          <a href="">보도자료</a>
+          <a href="">고객지원</a>
+          <a href="">회사소개</a>
+          <a href="">API</a>
         </div>
+        <p class="main-tt">
+          서울특별시 강남구 테헤란로 521 30층 (삼성동, 파르나스타워)
+          <br />대표자: 조혁진 | 대표전화: 02-3454-1560 | FAX: 02-3454-1565
+        </p>
+        <a class="footer-icon" href=""></a>
       </div>
-    </div>
-  </main>
-  <!-- footer-민용 -->
-  <footer>
-    <div class='footer-width'>
-      <div class='footer-link'>
-        <a href="">라이엇스토어</a>
-        <a href="">라이엇모바일</a>
-        <a href="">인재채용 </a>
-        <a href="">문의등록</a>
-        <a href="">보도자료</a>
-        <a href="">고객지원</a>
-        <a href="">회사소개</a>
-        <a href="">API</a>
-      </div>
-      <p class='main-tt'>서울특별시 강남구 테헤란로 521 30층 (삼성동, 파르나스타워)
-        <br>대표자: 조혁진 | 대표전화: 02-3454-1560 | FAX: 02-3454-1565
-      </p>
-      <a class="footer-icon" href=""></a>
-    </div>
-  </footer>
+    </footer>
 
-  <footer class="footer2">
-    <div class="footer-width">
-      <p class="light-g3">&copy; 2023 Riot Games, Inc. All Rights Reserved.</p>
-    </div>
-  </footer>
-  <script src="main.js"></script>
-</body>
+    <footer class="footer2">
+      <div class="footer-width">
+        <p class="light-g3">
+          &copy; 2023 Riot Games, Inc. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>
