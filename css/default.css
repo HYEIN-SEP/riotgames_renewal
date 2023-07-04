@@ -522,12 +522,16 @@ input[type="text"] {
 }
 
 .panel-body {
-  height: 160px;
+  height: 140px;
   border: #e7e7e7 solid 1px;
 }
 
 .panel-body p {
   padding-bottom: 30px;
+}
+
+.panel-body:last-child {
+  height: 220px;
 }
 
 .more-btn a {
