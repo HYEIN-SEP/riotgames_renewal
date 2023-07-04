@@ -587,6 +587,10 @@ input[type="text"] {
   position: absolute;
 }
 
+.esport-btn:hover {
+  background: #d20028;
+}
+
 /*footer*/
 footer {
   width: 100%;
@@ -659,7 +663,7 @@ footer > div > p:nth-child(2) {
   margin-top: 51px;
 }
 
-.popup{
+.popup {
   position: fixed;
   left: 100px;
   top: 100px;
@@ -669,15 +673,15 @@ footer > div > p:nth-child(2) {
   margin: 0;
 }
 
-.popup h1{
+.popup h1 {
   padding-bottom: 30px;
 }
 
-.popup div{
+.popup div {
   padding-top: 30px;
 }
 
-#close{
+#close {
   width: 80px;
   height: 30px;
   background-color: #474747;
