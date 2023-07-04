@@ -658,3 +658,30 @@ footer > div > p:nth-child(2) {
 .footer2 > div > p {
   margin-top: 51px;
 }
+
+.popup{
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  z-index: 10;
+  line-height: 27px;
+  padding: 30px;
+  margin: 0;
+}
+
+.popup h1{
+  padding-bottom: 30px;
+}
+
+.popup div{
+  padding-top: 30px;
+}
+
+#close{
+  width: 80px;
+  height: 30px;
+  background-color: #474747;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
