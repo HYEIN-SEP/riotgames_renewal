@@ -179,13 +179,13 @@ window.addEventListener("scroll", () => {
 });
 
 function switchImg1() {
-  logoa.style.backgroundImage = "url(/images/logo_shrink.png)";
+  logoa.style.backgroundImage = "url(images/logo_shrink.png)";
   logoa.style.width = "55px";
   logoa.style.marginTop = "12.5px";
 }
 
 function switchImg2() {
-  logoa.style.backgroundImage = "url(/images/logo.png)";
+  logoa.style.backgroundImage = "url(images/logo.png)";
   logoa.style.width = "196px";
   logoa.style.marginTop = "42.5px";
 }
