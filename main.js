@@ -1,39 +1,39 @@
 //팝업
-  let popup = document.querySelector('.popup'),
-    closeBtn = popup.querySelector('#close'),
-    dayCheck = popup.querySelector('#daycheck');
+let popup = document.querySelector(".popup"),
+  closeBtn = popup.querySelector("#close"),
+  dayCheck = popup.querySelector("#daycheck");
 
-    function setCookie(name,value,day){
-      let date = new Date()
-      date.setDate(date.getDate()+day);
-      document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
-    } setCookie('ABC','home',7);
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+setCookie("ABC", "home", 7);
 
-    function cookieCheck(name){
-      let cookieArr = document.cookie.split(';');
-      let visited = false;
+function cookieCheck(name) {
+  let cookieArr = document.cookie.split(";");
+  let visited = false;
 
-      for(let cookie of cookieArr){
-        if(cookie.search(name) > -1){
-          visited = true;
-          break;
-        }
-      }
-      if(!visited){
-        popup.setAttribute('open','');
-      }
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
     }
-    cookieCheck('ABC');
+  }
+  if (!visited) {
+    popup.setAttribute("open", "");
+  }
+}
+cookieCheck("ABC");
 
-    closeBtn.addEventListener('click',()=>{
-      popup.removeAttribute('open');
-      if(dayCheck.cheked){
-        setCookie('ABC','home',1);
-      }else{
-        setCookie('ABC','home',-1);
-      }
-    });
-
+closeBtn.addEventListener("click", () => {
+  popup.removeAttribute("open");
+  if (dayCheck.cheked) {
+    setCookie("ABC", "home", 1);
+  } else {
+    setCookie("ABC", "home", -1);
+  }
+});
 
 // 드롭다운-혜인
 let bottommenu = document.querySelectorAll(".bottom_menu li"),
@@ -216,7 +216,7 @@ tabMenu.forEach((item) => {
 let pheader = document.querySelectorAll(".panel-heading"); //단
 let notice = document.querySelectorAll(".panel-notice"); //내용
 let moreBtn = document.getElementById("btn-collapse"); //더보기버튼
-let triangle = document.querySelector("triangle");
+let triangle = document.querySelector(".triangle");
 
 notice.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -239,5 +239,3 @@ pheader.forEach((item) => {
 triangle.addEventListener("click", () => {
   triangle.classList.toggle("active");
 });
-
-
