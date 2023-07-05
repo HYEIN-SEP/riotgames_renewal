@@ -582,7 +582,6 @@ input[type="text"] {
 
 .esport-p {
   float: left;
-  margin-top: 10px;
 }
 
 .esport-container p:nth-child(1) {
@@ -592,6 +591,7 @@ input[type="text"] {
 .esport-container p:nth-child(2) {
   font-size: 24px;
   clear: both;
+  margin-top: 15px;
 }
 
 .esport-btn {
