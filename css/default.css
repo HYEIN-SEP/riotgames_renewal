@@ -356,16 +356,6 @@ input[type="text"] {
   transform-style: preserve-3d;
 }
 
-/* .card {
-  float: left;
-  width: 300px;
-  height: 378px;
-  margin-right: 24px;
-  position: relative;
-  transition: 1s;
-  transform-style: preserve-3d;
-} */
-
 .side {
   position: absolute;
   left: 0;
@@ -711,10 +701,6 @@ footer > div > p:nth-child(2) {
 
 .popup h1 {
   padding-bottom: 30px;
-}
-
-.popup div {
-  padding-top: 30px;
 }
 
 #close {
