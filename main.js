@@ -7,7 +7,7 @@ function setCookie(name,value,day) {
   let date = new Date();
   date.setDate(date.getDate() + day);
   document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
-} 
+}
 // setCookie('ABC','home',1);
 
 function cookieCheck(name) {
@@ -231,7 +231,7 @@ tabMenu.forEach((item) => {
 let pheader = document.querySelectorAll(".panel-heading"); //단
 let notice = document.querySelectorAll(".panel-notice"); //내용
 let moreBtn = document.getElementById("btn-collapse"); //더보기버튼
-let triangle = document.querySelector("triangle");
+let triangle = document.querySelector(".triangle");
 
 notice.forEach((item) => {
   item.addEventListener("click", (e) => {
