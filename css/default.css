@@ -84,12 +84,12 @@ nav ul {
   height: 470px;
   text-align: left;
   padding-left: 34px;
-  border-left: 1px solid #9a9a9a;
+  border-left: 1px solid #000;
 }
 
 nav ul:last-child {
   margin-right: 0;
-  border-right: 1px solid #9a9a9a;
+  border-right: 1px solid #000;
 }
 
 nav ul li {
@@ -156,10 +156,6 @@ input[type="text"] {
 }
 
 /* 언어설정 */
-.earth {
-  position: relative;
-}
-
 .lang {
   position: absolute;
   right: 250px;
@@ -321,7 +317,7 @@ input[type="text"] {
   background: #eb0029;
 }
 
-/* 기업소개-이미지 애니메이션 */
+/* 기업소개 */
 
 .int {
   height: 600px;
@@ -335,6 +331,10 @@ input[type="text"] {
   position: relative;
   transition: 1s;
   transform-style: preserve-3d;
+}
+
+.int div:nth-child(5) {
+  margin-right: 0px;
 }
 
 .card .side {
@@ -359,10 +359,6 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.card:hover {
-  transform: rotateY(180deg);
-}
-
 .back p {
   margin: 128px 0 30px 0;
   text-align: center;
@@ -375,7 +371,10 @@ input[type="text"] {
 .back div a {
   line-height: 27px;
   color: #fff;
-  border-bottom: 2px solid #fff;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
 }
 
 .int_subtitle ul li {
@@ -383,10 +382,6 @@ input[type="text"] {
   width: 298px;
   margin: 24px 24px 0 0;
   text-align: center;
-}
-
-.int div:nth-child(5) {
-  margin-right: 0px;
 }
 
 .int_subtitle ul li:last-child {

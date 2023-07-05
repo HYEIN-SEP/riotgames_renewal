@@ -59,7 +59,6 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
   prevBtn = slideWrapper.querySelector("#prev"),
   nextBtn = slideWrapper.querySelector("#next");
 
-//슬라이드 만들기
 if (slideCount > 1) {
   slides.forEach((item, idx) => {
     item.style.left = `${idx * 100}%`;
@@ -124,7 +123,7 @@ slideWrapper.addEventListener("mouseleave", () => {
   autoslide(timer);
 });
 
-//검색 모달
+//모달-혜인
 let magnify = document.querySelector(".magnify"),
   modal = document.querySelector(".modal"),
   mdbg = document.querySelector(".mdbg");
@@ -138,7 +137,7 @@ mdbg.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-//언어설정 드롭다운
+//언어설정 -혜인
 let earth = document.querySelector(".earth"),
   lang = document.querySelector(".lang"),
   langs = document.querySelectorAll(".lang ul li a");
@@ -239,40 +238,4 @@ pheader.forEach((item) => {
 
 triangle.addEventListener("click", () => {
   triangle.classList.toggle("active");
-});
-
-//팝업
-let popup = document.querySelector(".popup"),
-  closeBtn = popup.querySelector("#close"),
-  dayCheck = popup.querySelector("#daycheck");
-
-function setCookie(name, value, day) {
-  let date = new Date();
-  date.setDate(date.getDate() + day);
-  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
-}
-
-function cookieCheck(name) {
-  let cookieArr = document.cookie.split(";");
-  let visited = false;
-
-  for (let cookie of cookieArr) {
-    if (cookie.search(name) > -1) {
-      visited = true;
-      break;
-    }
-  }
-  if (!visited) {
-    popup.setAttribute("open", "");
-  }
-}
-cookieCheck("ABC");
-
-closeBtn.addEventListener("click", () => {
-  popup.removeAttribute("open");
-  if (dayCheck.checked) {
-    setCookie("ABC", "home", 1);
-  } else {
-    setCookie("ABC", "home", -1);
-  }
 });
