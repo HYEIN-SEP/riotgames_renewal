@@ -3,7 +3,7 @@ let popup = document.querySelector(".popup"),
   closeBtn = popup.querySelector("#close"),
   dayCheck = popup.querySelector("#daycheck");
 
-function setCookie(name,value,day) {
+function setCookie(name, value, day) {
   let date = new Date();
   date.setDate(date.getDate() + day);
   document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
@@ -59,7 +59,7 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
   prevBtn = slideWrapper.querySelector("#prev"),
   nextBtn = slideWrapper.querySelector("#next");
 
-  console.log(slideCount)
+console.log(slideCount);
 
 //슬라이드 만들기
 if (slideCount > 1) {
@@ -130,9 +130,8 @@ slideWrapper.addEventListener("mouseleave", () => {
 let magnify = document.querySelector(".magnify"),
   modal = document.querySelector(".modal"),
   mdbg = document.querySelector(".mdbg"),
-  inputModal = modal.querySelector('input'),
-  modalclose = modal.querySelector('.modalclose');
-
+  inputModal = modal.querySelector("input"),
+  modalclose = modal.querySelector(".modalclose");
 
 magnify.addEventListener("click", () => {
   modal.style.display = "block";
@@ -144,13 +143,10 @@ mdbg.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-modalclose.addEventListener("click",(e)=>{
+modalclose.addEventListener("click", (e) => {
   e.preventDefault();
   modal.style.display = "none";
 });
-
-
-
 
 //언어설정 드롭다운
 let earth = document.querySelector(".earth"),
