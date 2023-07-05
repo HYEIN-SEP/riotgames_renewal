@@ -34,6 +34,7 @@ header.shrink {
 header .menu {
   width: 600px;
   float: right;
+  position: relative;
 }
 
 .menu ul {
@@ -67,13 +68,51 @@ header .menu {
   color: #eb0029;
 }
 
+/* 언어설정 */
+.lang {
+  position: absolute;
+  right: -95px;
+  top: 60px;
+  display: none;
+  z-index: 2;
+}
+
+.lang.active {
+  display: block;
+}
+
+.lang ul {
+  background-color: #fff;
+  padding: 10px 30px 0 0;
+  width: 170px;
+  height: 295px;
+  overflow-y: scroll;
+}
+
+.lang ul li a{
+  color: #9a9a9a;
+  cursor: pointer;
+}
+
+.upsign{
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #fff;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left:92px;
+}
+
+/* 드롭다운메뉴 */
 nav {
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 470px;
+  height: 386px;
   background-color: #fff;
   display: none;
 }
@@ -81,9 +120,9 @@ nav {
 nav ul {
   float: left;
   width: 176px;
-  height: 470px;
+  height: 338px;
   text-align: left;
-  padding-left: 34px;
+  padding: 24px 0 24px 34px;
   border-left: 1px solid #9a9a9a;
 }
 
@@ -93,7 +132,7 @@ nav ul:last-child {
 }
 
 nav ul li {
-  padding-top: 34px;
+  padding-top: 18px;
 }
 
 nav ul li a {
@@ -111,6 +150,7 @@ nav ul li:first-child {
 nav.active {
   display: block;
 }
+
 
 /* 모달 */
 .modal {
@@ -155,48 +195,20 @@ input[type="text"] {
   top: 30%;
 }
 
-/* 언어설정 */
-.earth {
-  position: relative;
-}
-
-.lang {
+.modalclose{
   position: absolute;
-  right: 250px;
-  top: 70px;
-  display: none;
-  z-index: 2;
+  right:-10%;
+  top:-60%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
 }
 
-.lang.active {
-  display: block;
+.modalclose i{
+  margin-top: 10px;
 }
 
-.lang ul {
-  width: 130px;
-  height: 295px;
-  padding-left: 20px;
-  background-color: #fff;
-  overflow: scroll;
-}
-
-.lang ul a {
-  color: #9a9a9a;
-  cursor: pointer;
-}
-
-.lang:before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-bottom: 5px solid #fff;
-  border-top: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  position: absolute;
-  top: -10px;
-  left: calc(50% - 2.5px);
-}
 
 /* 슬라이드 */
 .slide-wrapper {
@@ -327,7 +339,27 @@ input[type="text"] {
   height: 600px;
 }
 
+.card-container{
+  position:relative;
+  cursor: pointer;
+  width: 300px;
+  height: 378px;
+  margin-right: 18px;
+  perspective: 600px;
+  display: inline-block;
+}
+
 .card {
+  float: left;
+  height: 100%;
+  width: 100%;  
+  position: absolute;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+
+/* .card {
   float: left;
   width: 300px;
   height: 378px;
@@ -335,10 +367,9 @@ input[type="text"] {
   position: relative;
   transition: 1s;
   transform-style: preserve-3d;
-}
+} */
 
-.card .side {
-  cursor: pointer;
+.side {
   position: absolute;
   left: 0;
   top: 0;
@@ -348,7 +379,7 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.card .back {
+.back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -357,10 +388,6 @@ input[type="text"] {
   backface-visibility: hidden;
   border-radius: 20px;
   overflow: hidden;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
 }
 
 .back p {
@@ -392,6 +419,11 @@ input[type="text"] {
 .int_subtitle ul li:last-child {
   margin-right: 0;
 }
+
+.card-container:hover .card{
+  transform: rotateY(180deg);
+}
+
 
 /*tab*/
 
@@ -671,6 +703,8 @@ footer > div > p:nth-child(2) {
 .footer2 > div > p {
   margin-top: 51px;
 }
+
+/* 팝업 */
 
 .popup {
   position: fixed;

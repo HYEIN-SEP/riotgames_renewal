@@ -129,16 +129,28 @@ slideWrapper.addEventListener("mouseleave", () => {
 //검색 모달
 let magnify = document.querySelector(".magnify"),
   modal = document.querySelector(".modal"),
-  mdbg = document.querySelector(".mdbg");
+  mdbg = document.querySelector(".mdbg"),
+  inputModal = modal.querySelector('input'),
+  modalclose = modal.querySelector('.modalclose');
+
 
 magnify.addEventListener("click", () => {
   modal.style.display = "block";
+  inputModal.focus();
   nav.classList.remove("active");
 });
 
 mdbg.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
+modalclose.addEventListener("click",(e)=>{
+  e.preventDefault();
+  modal.style.display = "none";
+});
+
+
+
 
 //언어설정 드롭다운
 let earth = document.querySelector(".earth"),

@@ -24,7 +24,7 @@ header {
 }
 
 .xsm-pd {
-  padding: 28px;
+  padding-top: 28px;
 }
 
 /* font-family: 'NanumBarunGothicExtraLight';
@@ -53,6 +53,7 @@ font-family: 'NanumBarunGothicBold'; */
 .small-pg {
   font-size: 14px;
   line-height: 27px;
+  font-family: "NanumBarunGothic";
 }
 
 /*color*/
