@@ -8,7 +8,7 @@ function setCookie(name, value, day) {
   date.setDate(date.getDate() + day);
   document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
 }
-setCookie("ABC", "home", 7);
+// setCookie('ABC','home',1);
 
 function cookieCheck(name) {
   let cookieArr = document.cookie.split(";");
@@ -28,7 +28,7 @@ cookieCheck("ABC");
 
 closeBtn.addEventListener("click", () => {
   popup.removeAttribute("open");
-  if (dayCheck.cheked) {
+  if (dayCheck.checked) {
     setCookie("ABC", "home", 1);
   } else {
     setCookie("ABC", "home", -1);
@@ -58,6 +58,8 @@ let slideWrapper = document.querySelector(".slide-wrapper"),
   currentSlideIdx = 0,
   prevBtn = slideWrapper.querySelector("#prev"),
   nextBtn = slideWrapper.querySelector("#next");
+
+console.log(slideCount);
 
 //슬라이드 만들기
 if (slideCount > 1) {
@@ -239,40 +241,4 @@ pheader.forEach((item) => {
 
 triangle.addEventListener("click", () => {
   triangle.classList.toggle("active");
-});
-
-//팝업
-let popup = document.querySelector(".popup"),
-  closeBtn = popup.querySelector("#close"),
-  dayCheck = popup.querySelector("#daycheck");
-
-function setCookie(name, value, day) {
-  let date = new Date();
-  date.setDate(date.getDate() + day);
-  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
-}
-
-function cookieCheck(name) {
-  let cookieArr = document.cookie.split(";");
-  let visited = false;
-
-  for (let cookie of cookieArr) {
-    if (cookie.search(name) > -1) {
-      visited = true;
-      break;
-    }
-  }
-  if (!visited) {
-    popup.setAttribute("open", "");
-  }
-}
-cookieCheck("ABC");
-
-closeBtn.addEventListener("click", () => {
-  popup.removeAttribute("open");
-  if (dayCheck.checked) {
-    setCookie("ABC", "home", 1);
-  } else {
-    setCookie("ABC", "home", -1);
-  }
 });
