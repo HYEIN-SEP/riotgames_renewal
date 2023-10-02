@@ -3,7 +3,7 @@
 📆 프로젝트 기간<br>
 2023.05.19 ~ 2023.07.06
 
-🧡 [종로삼가의 기획 및 디자인](https://docs.google.com/presentation/d/1ceVlt6oF1_LZNjhDwlFsi7fJITD7NvsG/edit?usp=sharing&ouid=118361869461165633584&rtpof=true&sd=true)
+🧡 [종로삼가의 기획 및 디자인](https://docs.google.com/presentation/d/1L6JH9Ba1Mpr5JxWdxUbnfEP5k0SxOEecpKGZRZFItrk/edit?usp=sharing)
 
 👩 팀원 및 담당파트
 
