@@ -225,7 +225,7 @@ input[type="text"] {
   transition: left 0.3s ease-in;
 }
 
-.slide-container > li {
+.slide-container>li {
   position: absolute;
   top: 0%;
   height: 100%;
@@ -238,15 +238,19 @@ input[type="text"] {
 .slide1 {
   background-image: url("../images/slide1.png");
 }
+
 .slide2 {
   background-image: url("../images/slide2.png");
 }
+
 .slide3 {
   background-image: url("../images/slide3.png");
 }
+
 .slide4 {
   background-image: url("../images/slide4.png");
 }
+
 .slide5 {
   background-image: url("../images/slide5.png");
 }
@@ -299,6 +303,7 @@ input[type="text"] {
 #prev {
   left: 10%;
 }
+
 #next {
   right: 10%;
 }
@@ -433,6 +438,7 @@ input[type="text"] {
   background: #eb0029;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
+
 .tab-menu li a {
   transition: 0.3s ease-in;
 }
@@ -452,11 +458,11 @@ input[type="text"] {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.tab-content > div:last-child {
+.tab-content>div:last-child {
   display: none;
 }
 
-.tab-content > div.active {
+.tab-content>div.active {
   display: block;
 }
 
@@ -579,6 +585,7 @@ input[type="text"] {
   transform-origin: center 4px;
   transition: 0.3s ease-in;
 }
+
 /*esports*/
 .esport {
   width: 100%;
@@ -628,11 +635,9 @@ footer {
   height: 214px;
   position: absolute;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    99deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(29, 29, 29, 1) 52%
-  );
+  background: linear-gradient(99deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(29, 29, 29, 1) 52%);
 }
 
 .footer-width {
@@ -641,7 +646,7 @@ footer {
   margin: 0 auto;
 }
 
-.footer-link > a {
+.footer-link>a {
   color: #fff;
   font-family: "NanumBarunGothic";
   margin-right: 30px;
@@ -655,7 +660,7 @@ footer {
   color: #eb0029;
 }
 
-footer > div > p:nth-child(2) {
+footer>div>p:nth-child(2) {
   color: #9a9a9a;
   font-family: "NanumBarunGothic";
 }
@@ -683,7 +688,7 @@ footer > div > p:nth-child(2) {
   border-top: #474747 3px solid;
 }
 
-.footer2 > div > p {
+.footer2>div>p {
   margin-top: 51px;
 }
 
@@ -710,4 +715,9 @@ footer > div > p:nth-child(2) {
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
+}
+
+.text {
+  color: #eb0029;
+  font-weight: 600;
 }
